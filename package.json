@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "example-company-website-gatsby-sanity-combo",
+  "name": "crafted-gatsby-sanity",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Crafted <hello@crafted.im>",
   "scripts": {
     "clean": "lerna clean",
     "deploy": "lerna run deploy",
