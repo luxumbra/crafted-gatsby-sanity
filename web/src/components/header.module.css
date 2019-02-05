@@ -6,7 +6,7 @@
   background: rgba(var(--color-accent), 0);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0);
   z-index: 100;
-  transition: background 0.4s ease-in-out, box-shadow 0.5s ease-in-out, height 0.4s 0.2s ease-in-out;
+  transition: background 0.4s ease-in-out, box-shadow 0.5s ease-in-out, height 0.4s ease-in-out;
 }
 .fixed {
   position: fixed;
@@ -19,7 +19,6 @@
   background: rgba(var(--color-main-dark), 0.8);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
   height: var(--header-height-small);
-  padding: 0.5em;
 }
 .wrapper {
   box-sizing: border-box;
@@ -27,7 +26,11 @@
   max-width: 960px;
   padding: 1em;
   display: flex;
+  transition: padding 0.3s ease-in-out;
 
+  @nest .sticky & {
+    padding: 0.5em;
+  }
   @media (--media-min-small) {
     padding: 1.5em 1.5em;
   }
@@ -73,7 +76,7 @@
 .nav {
   display: none;
   color: var(--nav-link);
-
+  transition: all 0.3s ease-in-out;
   @nest & ul {
     margin: 0;
     padding: 0;
@@ -93,12 +96,15 @@
 
   @media (--media-max-small) {
     position: absolute;
-    background: #fff;
+    background: rgba(var(--color-main-dark), 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
     top: 4rem;
 
+    @nest .sticky & {
+      top: 3em;
+    }
     @nest & ul {
       padding: 1rem 0;
     }
