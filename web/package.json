@@ -18,6 +18,7 @@
     "@sanity/image-url": "^0.140.0",
     "date-fns": "^1.30.1",
     "dotenv": "^6.2.0",
+    "feather-icons": "^4.16.0",
     "gatsby": "^2.0.76",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.2",
@@ -26,7 +27,9 @@
     "postcss-preset-env": "^6.5.0",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "scrollreveal": "^4.0.5",
+    "typed.js": "^2.0.10"
   },
   "devDependencies": {
     "eslint": "^5.11.1",

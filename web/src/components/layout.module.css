@@ -2,15 +2,31 @@
 @import '../styles/vars.css';
 
 .content {
-  min-height: calc(100% - 73px - 152px);
-
+  background: radial-gradient(ellipse at center, rgb(var(--color-main)) 1%, rgb(var(--color-main-dark)) 100%);
+  min-height: calc(100% - var(--header-height) - var(--footer-height));
+  padding-top: var(--header-height);
   @media (--media-min-small) {
-    min-height: calc(100% - 90px - 169px);
+    min-height: calc(100% - var(--header-height) - var(--footer-height));
   }
 }
 
 .footer {
+  background: rgb(var(--color-white));
+  box-shadow: 0 0 2rem rgba(var(--color-black), 0.6);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
+  color: rgb(var(--color-main));
 
+  @nest & a {
+    color: rgb(var(--color-main));
+
+    @nest &:hover {
+      color: var(--link-accent-hover-color);
+    }
+  }
 }
 
 .footerWrapper {
