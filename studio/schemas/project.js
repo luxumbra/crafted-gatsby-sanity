@@ -25,6 +25,11 @@ export default {
       type: 'datetime'
     },
     {
+      name: 'projectURL',
+      title: 'Project URL',
+      type: 'url'
+    },
+    {
       name: 'excerpt',
       title: 'Excerpt',
       type: 'blockText'
@@ -55,6 +60,27 @@ export default {
       title: 'Categories',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'category' } }]
+    },
+    {
+      name: 'highlights',
+      title: 'Highlights',
+      type: 'text'
+    },
+    {
+      name: 'role',
+      title: 'Role',
+      type: 'text'
+    },
+    {
+      name: 'client',
+      title: 'Client',
+      type: 'string'
+    },
+    {
+      name: 'technology',
+      title: 'Technology',
+      type: 'text',
+      description: 'What key technologies did you use?'
     },
     {
       name: 'body',
