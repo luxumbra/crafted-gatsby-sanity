@@ -1,6 +1,6 @@
 @import '../styles/media-queries.css';
 
-.root {
+/* .root {
   box-sizing: border-box;
   max-width: 960px;
   padding: 1.5em;
@@ -9,4 +9,4 @@
   @media (--media-min-small) {
     padding: 2em;
   }
-}
+} */

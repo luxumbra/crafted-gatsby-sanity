@@ -37,7 +37,9 @@
 }
 
 .branding {
-  font-size: inherit;
+  font-family: var(--brand-font);
+  font-size: 1rem;
+  font-weight: 100;
   margin: 0;
   flex: 1;
 
@@ -46,12 +48,19 @@
     padding: 0.5em;
     color: var(--nav-link);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
 
     @media (hover: hover) {
       @nest &:hover {
-        text-decoration: underline;
+        color: var(--nav-link-hover);
       }
     }
+  }
+  @media (--supersport) {
+    font-size: 1.2rem;
+  }
+  @media (--supersbike) {
+    font-size: 1.5rem;
   }
 }
 
@@ -64,11 +73,11 @@
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
 
-  & svg {
+  @nest & svg {
     display: block;
   }
 
-  @media (--media-min-small) {
+  @media (--supersport) {
     display: none;
   }
 }
@@ -77,6 +86,10 @@
   display: none;
   color: var(--nav-link);
   transition: all 0.3s ease-in-out;
+  font-family: var(--brand-font);
+  font-size: 1rem;
+  font-weight: 100;
+
   @nest & ul {
     margin: 0;
     padding: 0;
@@ -86,21 +99,28 @@
     display: block;
     color:  var(--nav-link);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
   }
 
   @media (hover: hover) {
     @nest & ul li a:hover {
-      text-decoration: underline;
+      color: var(--nav-link-hover);
     }
   }
+  @media (--supersport) {
+    font-size: 1.2rem;
+  }
+  @media (--supersbike) {
+    font-size: 1.5rem;
+  }
 
-  @media (--media-max-small) {
+  @media (--media-max-medium) {
     position: absolute;
     background: rgba(var(--color-main-dark), 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
-    top: 4rem;
+    top: var(--header-height);
 
     @nest .sticky & {
       top: 3em;
@@ -114,7 +134,7 @@
     }
   }
 
-  @media (--media-min-small) {
+  @media (--supersport) {
     display: block;
 
     @nest & ul {

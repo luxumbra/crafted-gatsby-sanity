@@ -9,6 +9,14 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [`Roboto:100`, `Roboto Slab:100`, `Assistant:200`]
+        }
+      }
+    },
+    {
       resolve: 'gatsby-source-sanity',
       options: {
         projectId,

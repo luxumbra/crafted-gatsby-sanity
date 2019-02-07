@@ -48,7 +48,7 @@ const ProjectsPage = props => {
   return (
     <Layout>
       <SEO title='Projects' />
-      <Container>
+      <Container page='projects'>
         <h1 className={responsiveTitle1}>Projects</h1>
         {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}
       </Container>

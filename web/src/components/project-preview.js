@@ -7,27 +7,36 @@ import BlockText from './block-text'
 import styles from './project-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
 
-function ProjectPreview (props) {
+function ProjectPreview (props, nodeKey) {
   return (
-    <Link className={styles.root} to={`/project/${props.slug.current}`}>
-      <div className={styles.leadMediaThumb}>
+    <div className={cn(styles.root, styles.projectSummary)}>
+      <Link to={`/project/${props.slug.current}`}>
         {props.mainImage && props.mainImage.asset && (
-          <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
-              .width(600)
-              .height(Math.floor((9 / 16) * 600))
-              .url()}
-            alt={props.mainImage.alt}
-          />
+          <figure className={styles.figure}>
+            <img
+              src={imageUrlFor(buildImageObj(props.mainImage))
+                .width(600)
+                .height(Math.floor((9 / 16) * 600))
+                .url()}
+              alt={props.mainImage.alt}
+              className={styles.projectThumb}
+            />
+          </figure>
         )}
-      </div>
-      <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
-      {props._rawExcerpt && (
-        <div className={styles.excerpt}>
-          <BlockText blocks={props._rawExcerpt} />
-        </div>
-      )}
-    </Link>
+        <h3 className={responsiveTitle3}>{props.title}</h3>
+        {props._rawExcerpt && (
+          <div className={styles.excerpt}>
+            <BlockText blocks={props._rawExcerpt} />
+          </div>
+        )}
+        {/* <ul>
+          <li><i data-feather="user"></i> <span>Role in project: { project.node.frontmatter.role }</span></li>
+          <li><i data-feather="package"></i> <span>Technology used: { project.node.frontmatter.technology }</span></li>
+          <li><i data-feather="star"></i> <span>Highlights: { project.node.frontmatter.highlights }</span></li>
+          <li><i data-feather="at-sign"></i> <span>Client/Employer: { project.node.frontmatter.client }</span></li>
+        </ul> */}
+      </Link>
+    </div>
   )
 }
 

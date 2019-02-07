@@ -24,7 +24,7 @@ a {
 h1,
 h2,
 h3 {
-  color: var(--color-white);
+  color: rgb(var(--color-white));
 
   @nest & a {
     color: var(--link-accent-color);
@@ -37,9 +37,12 @@ h3 {
 }
 h3 {
   font-size: 1.6rem;
-  @include bp(motogp) {
+  @media (--motogp) {
     font-size: 2rem
   }
+}
+svg {
+  vertical-align: middle;
 }
 .typed {
   font-size: 1.2rem;
@@ -151,7 +154,7 @@ blockquote .large {
 footer {
 
   @nest & a {
-    color: var(--color-main);
+    color: rgb(var(--color-main));
 
     @nest &:hover {
       color: var(--link-accent-color);

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
+import Fade from 'react-reveal'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -119,22 +120,24 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {projectNodes && (
-          <ProjectPreviewGrid
-            title='Latest projects'
-            nodes={projectNodes}
-            browseMoreHref='/projects/'
-          />
-        )}
-        {postNodes && (
-          <BlogPostPreviewGrid
-            title='Latest blog posts'
-            nodes={postNodes}
-            browseMoreHref='/blog/'
-          />
-        )}
+      <Container page='home'>
+        <Fade ssrFadeOut cascade>
+          <h1 hidden>Welcome to {site.title}</h1>
+          {projectNodes && (
+            <ProjectPreviewGrid
+              title='Latest projects'
+              nodes={projectNodes}
+              browseMoreHref='/projects/'
+            />
+          )}
+          {postNodes && (
+            <BlogPostPreviewGrid
+              title='Latest blog posts'
+              nodes={postNodes}
+              browseMoreHref='/blog/'
+            />
+          )}
+        </Fade>
       </Container>
     </Layout>
   )

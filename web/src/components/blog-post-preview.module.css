@@ -1,5 +1,5 @@
 .root {
-  display: block;
+  /* display: block; */
   color: inherit;
   text-decoration: none;
 }
@@ -20,6 +20,7 @@
 }
 
 .title {
+  color: rgb(var(--color-white));
   @media (hover: hover) {
     @nest .root:hover & {
       text-decoration: underline;

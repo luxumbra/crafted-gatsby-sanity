@@ -58,13 +58,13 @@ const AboutPage = props => {
   return (
     <Layout>
       <SEO title={page.title} />
-      <Container>
+      <Container page='about'>
         <h1 className={responsiveTitle1}>{page.title}</h1>
         <BlockContent blocks={page._rawBody || []} />
         {personNodes &&
           personNodes.length > 0 && (
-            <PeopleGrid items={personNodes} title="People" />
-          )}
+          <PeopleGrid items={personNodes} title="People" />
+        )}
       </Container>
     </Layout>
   )

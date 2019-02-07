@@ -5,11 +5,45 @@
   background: radial-gradient(ellipse at center, rgb(var(--color-main)) 1%, rgb(var(--color-main-dark)) 100%);
   min-height: calc(100% - var(--header-height) - var(--footer-height));
   padding-top: var(--header-height);
-  @media (--media-min-small) {
-    min-height: calc(100% - var(--header-height) - var(--footer-height));
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  min-height: 100vh;
+  width: 100%;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+
+  @nest & > section {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    @media (--motogp) {
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+    &[page='home'] {
+
+      text-align: center;
+
+      & .logo {
+          min-width: 150px;
+          max-width: 400px;
+          width: 30%;
+      }
+    }
+    &[page='about'] {
+      text-align: center;
+    }
+    &[page='projects'] {
+      /* grid-column-start: 3;
+      grid-column-end: 11; */
+    }
   }
 }
-
 .footer {
   background: rgb(var(--color-white));
   box-shadow: 0 0 2rem rgba(var(--color-black), 0.6);
@@ -20,11 +54,29 @@
   height: var(--footer-height);
   color: rgb(var(--color-main));
 
+  @nest & ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   @nest & a {
     color: rgb(var(--color-main));
-
-    @nest &:hover {
-      color: var(--link-accent-hover-color);
+    font-size: inherit;
+    &:hover {
+      color: var(--link-hover-color-footer);
+    }
+    &.navLink {
+      display: block;
+      padding: .5rem 1rem;
+    }
+    & span {
+      display: inline;
+      box-sizing: border-box;
     }
   }
 }
@@ -32,11 +84,10 @@
 .footerWrapper {
   box-sizing: border-box;
   max-width: 960px;
-  padding: 1.5em;
   margin: 0 auto;
 
   @media (--media-min-small) {
-    padding: 2em;
+
   }
 }
 

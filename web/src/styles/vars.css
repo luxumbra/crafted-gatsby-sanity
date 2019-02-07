@@ -10,16 +10,18 @@
   --hoverO: 0.6;
 
   --copy-color-main: rgb(var(--color-white));
-  --link-color: rgba(var(--color-white, --linkO));
-  --link-hover-color: rgba(var(--color-accent, --hoverO));
-  --link-accent-color: rgba(var(--color-accent, --linkO));
-  --link-accent-hover-color: rgba(var(--color-accent, --hoverO));
+  --link-color: rgba(var(--color-white), var(--linkO));
+  --link-hover-color: rgba(var(--color-accent), var(--hoverO));
+  --link-accent-color: rgba(var(--color-accent), var(--linkO));
+  --link-accent-hover-color: rgba(var(--color-accent), var(--hoverO));
+  --link-hover-color-footer: rgb(var(--color-accent));
   --nav-link: var(--link-color);
   --nav-link-hover: var(--link-hover-color);
 
   --body-font: 'Ubuntu', sans-serif;
-  --heading2-font: 'Assistant', sans-serif;
+  --heading-font: 'Assistant', sans-serif;
   --leader-font: 'Roboto', sans-serif;
+  --brand-font: 'Roboto Slab', sans-serif;
 
   --header-height: 10vh;
   --header-height-small: 7vh;

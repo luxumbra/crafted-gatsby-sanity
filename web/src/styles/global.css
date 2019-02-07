@@ -1,0 +1,23 @@
+@import './vars.css';
+
+.bodyProps {
+    background-color: #00444c;
+    background: radial-gradient(ellipse at center, #00444c 1%,#001f23 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-display: fallback;
+    font-size: 14px;
+}
+
+.leaderP {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.listItem {
+  font-family: var(--leader-font);
+  font-size: 0.9rem;
+  margin-left:  0;
+  padding: 0 0 1rem;
+}

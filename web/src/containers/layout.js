@@ -2,10 +2,10 @@ import { graphql, StaticQuery } from 'gatsby'
 import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 
-import ScrollReveal from 'scrollreveal'
 import feather from 'feather-icons'
 import Typed from 'typed.js'
 
+import '../styles/theme.css'
 import styles from '../components/header.module.css'
 
 const query = graphql`
@@ -61,14 +61,15 @@ function LayoutContainer (props) {
     const srRevealOnce = {
       reset: false
     }
-    ScrollReveal().reveal('.sr-fast', srRevealFast)
-    ScrollReveal().reveal('.sr-slow', srRevealSlow)
-    ScrollReveal().reveal('.sr-really-slow', srRevealSlooooow)
-    ScrollReveal().reveal('.sr-once', srRevealOnce)
 
     if (typeof window !== `undefined`) {
       // we need to check if `window` is defined when building the site so not to break the build
       // https://www.gatsbyjs.org/docs/debugging-html-builds/
+
+      // ScrollReveal().reveal(['sr-fast'], srRevealFast)
+      // ScrollReveal().reveal(['sr-slow'], srRevealSlow)
+      // ScrollReveal().reveal(['sr-really-slow'], srRevealSlooooow)
+      // ScrollReveal().reveal(['sr-once'], srRevealOnce)
 
       /* typed effect */
       const typedEl = document.getElementById('typed')
