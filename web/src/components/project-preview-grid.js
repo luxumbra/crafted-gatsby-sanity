@@ -7,8 +7,6 @@ import styles from './project-preview-grid.module.css'
 function ProjectPreviewGrid (props) {
   return (
     <div className={styles.root}>
-      { console.log('Preview grid props: ', props) }
-      }
       {/* {props.title && (
         <h2 className={styles.headline}>
           {props.browseMoreHref ? (
