@@ -4,12 +4,13 @@ import { cn, buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockText from './block-text'
 
-import styles from './project-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
+import styles from './project-preview.module.css'
 
-function ProjectPreview (props, nodeKey) {
+function ProjectPreview (props) {
   return (
     <div className={cn(styles.root, styles.projectSummary)}>
+      { console.log('Preview props: ', props) }
       <Link to={`/project/${props.slug.current}`}>
         {props.mainImage && props.mainImage.asset && (
           <figure className={styles.figure}>
@@ -29,12 +30,12 @@ function ProjectPreview (props, nodeKey) {
             <BlockText blocks={props._rawExcerpt} />
           </div>
         )}
-        {/* <ul>
-          <li><i data-feather="user"></i> <span>Role in project: { project.node.frontmatter.role }</span></li>
-          <li><i data-feather="package"></i> <span>Technology used: { project.node.frontmatter.technology }</span></li>
-          <li><i data-feather="star"></i> <span>Highlights: { project.node.frontmatter.highlights }</span></li>
-          <li><i data-feather="at-sign"></i> <span>Client/Employer: { project.node.frontmatter.client }</span></li>
-        </ul> */}
+        <ul>
+          <li><i data-feather="user"></i> <span>Role in project: { props.role }</span></li>
+          <li><i data-feather="package"></i> <span>Technology used: { props.technology }</span></li>
+          <li><i data-feather="star"></i> <span>Highlights: { props.highlights }</span></li>
+          <li><i data-feather="at-sign"></i> <span>Client/Employer: { props.client }</span></li>
+        </ul>
       </Link>
     </div>
   )

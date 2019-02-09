@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+:root {
+  --font-family-sans-serif: 'Fjalla One';
+
+  --body-bg: #121212;
+  --text-color: #eee;
+
+  --brand-primary: #cf142b;
+  --brand-secondary: #ca3f50;
+
+  --component-bg: #161616;
+  --component-border-color: #fefefe;
+  --component-box-shadow: 0 1px 10px color(var(--black) a(50%));
+
+  --main-navigation-color: color(var(--component-bg) shade(70%) saturation(20%));
+  --main-navigation-color--inverted: color(var(--main-navigation-color) contrast(80%));
+
+  --state-danger-color: #F8495F;
+}
