@@ -64,7 +64,8 @@ export default {
     {
       name: 'highlights',
       title: 'Highlights',
-      type: 'text'
+      type: 'text',
+      description: 'In one or two sentances, what were the best bits?'
     },
     {
       name: 'role',
