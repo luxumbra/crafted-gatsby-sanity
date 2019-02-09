@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
+import { mapEdgesToNodes, filterOutDocsWithoutSlugs, cn } from '../lib/helpers'
 import Fade from 'react-reveal'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
@@ -8,7 +8,8 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import { node } from 'prop-types';
+import SiteIntro from '../components/site-intro'
+import { node } from 'prop-types'
 
 export const query = graphql`
   query IndexPageQuery {
@@ -18,10 +19,7 @@ export const query = graphql`
       keywords
     }
 
-    projects: allSanityProject(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    projects: allSanityProject(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
@@ -56,10 +54,7 @@ export const query = graphql`
       }
     }
 
-    posts: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    posts: allSanityPost(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
@@ -109,8 +104,12 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
-  const projectNodes = (data || {}).projects ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs) : []
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
+    : []
+  const projectNodes = (data || {}).projects
+    ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
+    : []
 
   if (!site) {
     throw new Error(
@@ -121,22 +120,28 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container page='home'>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {projectNodes && (
-          <ProjectPreviewGrid
-            title='Latest projects'
-            nodes={projectNodes}
-            browseMoreHref='/projects/'
-          />
-        )}
-        {postNodes && (
-          <BlogPostPreviewGrid
-            title='Latest blog posts'
-            nodes={postNodes}
-            browseMoreHref='/blog/'
-          />
-        )}
+      <Container page="home">
+        <section>
+          <SiteIntro />
+        </section>
+        <section>
+          {projectNodes && (
+            <ProjectPreviewGrid
+              title="Latest projects"
+              nodes={projectNodes}
+              browseMoreHref="/projects/"
+            />
+          )}
+        </section>
+        <section>
+          {postNodes && (
+            <BlogPostPreviewGrid
+              title="Latest blog posts"
+              nodes={postNodes}
+              browseMoreHref="/blog/"
+            />
+          )}
+        </section>
       </Container>
     </Layout>
   )

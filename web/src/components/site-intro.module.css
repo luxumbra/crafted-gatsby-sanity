@@ -1,0 +1,85 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+
+.wrapper {
+}
+
+.lead {
+  font-family: var(--heading-font);
+  margin: 2rem 0;
+}
+.typed {
+  color: rgb(var(--color-white));
+  font-size: 1.2rem;
+
+  @media (--superstock) {
+    font-size: 1.6rem;
+  }
+  @media (--supersport) {
+    font-size: 1.8rem;
+  }
+}
+
+blockquote {
+  color: rgb(var(--color-white));
+  font-family: 'Roboto Slab', sans-serif;
+  font-display: swap;
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: justify-all;
+
+  @nest & footer {
+    font-size: 1rem;
+  }
+  @media (--superbike) {
+    font-size: 1.6rem;
+
+    @nest & footer {
+      font-size: 1.2rem;
+    }
+  }
+  @media (--motogp) {
+    font-size: 1.6rem;
+
+    @nest & footer {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+blockquote .large {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.precis {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.intro h2 {
+  font-family: var(--brand-font);
+  font-size: 2rem;
+
+  @media (--supersport) {
+    font-size: 2.5rem;
+  }
+  @media (--superbike) {
+    font-size: 3rem;
+  }
+}
+.intro p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 200;
+
+  @media (--supersport) {
+    font-size: 1.2rem;
+  }
+  @media (--superbike) {
+    font-size: 1.4rem;
+  }
+}
+.intro hr {
+  border-color: rgba(255, 255, 255, 0.05);
+  margin: 1rem -15px 0;
+}

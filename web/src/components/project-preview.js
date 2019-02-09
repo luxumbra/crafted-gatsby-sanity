@@ -10,7 +10,6 @@ import styles from './project-preview.module.css'
 function ProjectPreview (props) {
   return (
     <div className={cn(styles.root, styles.projectSummary)}>
-      { console.log('Preview props: ', props) }
       <Link to={`/project/${props.slug.current}`}>
         {props.mainImage && props.mainImage.asset && (
           <figure className={styles.figure}>

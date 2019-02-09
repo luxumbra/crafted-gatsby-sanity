@@ -17,16 +17,17 @@
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
 
-  @nest & > section {
+  @nest & > div {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 1;
     @media (--motogp) {
-        grid-column-start: 3;
-        grid-column-end: 11;
+        grid-column-start: 2;
+        grid-column-end: 12;
     }
     &[page='home'] {
-
+      grid-column-start: 2;
+      grid-column-end: 12;
       text-align: center;
 
       & .logo {
@@ -34,9 +35,19 @@
           max-width: 400px;
           width: 30%;
       }
+
+      & section:nth-of-type(1) {
+        display: flex;
+        height: 85vh;
+        max-height: 100%;
+        width: 100%;
+        align-items: center;
+      }
     }
     &[page='about'] {
       text-align: center;
+      grid-column-start: 3;
+      grid-column-end: 11;
     }
     &[page='projects'] {
       /* grid-column-start: 3;
