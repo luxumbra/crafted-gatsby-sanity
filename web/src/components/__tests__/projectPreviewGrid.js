@@ -9,7 +9,6 @@ describe('ProjectPreviewGrid', () => {
       .create(
         <ProjectPreviewGrid
           title="Latest projects"
-          nodes={projectNodes}
           browseMoreHref="/projects/"
         />
       )

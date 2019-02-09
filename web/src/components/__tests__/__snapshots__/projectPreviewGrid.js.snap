@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectPreviewGrid renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="browseMoreNav"
+  >
+    <a
+      href="/projects/"
+    >
+      Browse more
+    </a>
+  </div>
+</div>
+`;
