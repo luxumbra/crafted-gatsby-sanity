@@ -18,10 +18,15 @@
   padding-bottom: var(--footer-height);
 
   @nest & > div {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 12;
     grid-row-start: 1;
-    @media (--motogp) {
+
+    & section {
+      padding-top: 3rem;
+    }
+
+    @media (--superstock) {
         grid-column-start: 2;
         grid-column-end: 12;
     }
@@ -37,11 +42,17 @@
       }
 
       & section:nth-of-type(1) {
+        padding-top: 0;
         display: flex;
-        height: 85vh;
+        height: 100%;
         max-height: 100%;
         width: 100%;
-        align-items: center;
+
+
+        @media (--supersport) {
+          height: 85vh;
+          align-items: center;
+        }
       }
     }
     &[page='about'] {

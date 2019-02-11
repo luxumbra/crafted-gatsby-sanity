@@ -124,7 +124,7 @@ const IndexPage = props => {
         <section>
           <SiteIntro />
         </section>
-        <section>
+        <section id='latest-projects'>
           {projectNodes && (
             <ProjectPreviewGrid
               title="Latest projects"

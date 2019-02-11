@@ -72,7 +72,7 @@ function LayoutContainer (props) {
       // ScrollReveal().reveal(['sr-once'], srRevealOnce)
 
       /* typed effect */
-      const typedEl = document.getElementById('typed')
+      const typedEl = document.querySelector('.typed')
       const typedOptions = {
         strings: [
           'Web development^1000',
@@ -86,7 +86,7 @@ function LayoutContainer (props) {
         loopCount: Infinity
       }
       if (typedEl) {
-        const typed = new Typed('#typed', typedOptions)
+        const typed = new Typed(`.typed`, typedOptions)
       }
 
       // var scroll = new SmoothScroll('a[href*='#']', {
