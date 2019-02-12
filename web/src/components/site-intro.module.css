@@ -119,3 +119,7 @@ blockquote .large {
   border-color: rgba(255, 255, 255, 0.05);
   margin: 1rem -15px 0;
 }
+
+.primary-btn {
+    bottom: 4rem;
+}

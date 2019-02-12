@@ -120,25 +120,25 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container page="home">
+      <Container page='home'>
         <section>
           <SiteIntro />
         </section>
         <section id='latest-projects'>
           {projectNodes && (
             <ProjectPreviewGrid
-              title="Latest projects"
+              title='Latest projects'
               nodes={projectNodes}
-              browseMoreHref="/projects/"
+              browseMoreHref='/projects/'
             />
           )}
         </section>
         <section>
           {postNodes && (
             <BlogPostPreviewGrid
-              title="Latest blog posts"
+              title='Latest blog posts'
               nodes={postNodes}
-              browseMoreHref="/blog/"
+              browseMoreHref='/blog/'
             />
           )}
         </section>
