@@ -24,6 +24,7 @@
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-sanity": "^1.0.3",
+    "npm": "^6.7.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.5.0",
     "react": "^16.8.0-alpha.0",
@@ -33,6 +34,7 @@
     "typed.js": "^2.0.10"
   },
   "devDependencies": {
+    "@babel/plugin-transform-named-capturing-groups-regex": "^7.3.0",
     "babel-jest": "^24.1.0",
     "babel-preset-gatsby": "^0.1.7",
     "eslint": "^5.11.1",
