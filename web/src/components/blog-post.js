@@ -24,7 +24,7 @@ function BlogPost (props) {
           />
         </div>
       )}
-      <Container>
+      <Container page='post'>
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>

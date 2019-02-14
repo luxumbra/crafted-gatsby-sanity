@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "example-company-website-gatsby-sanity-combo-frontend",
+  "name": "Crafted with Sanity",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Dave Sayer <hello@crafted.im>",
   "scripts": {
     "build": "gatsby build",
     "deploy": "npm run now-deploy",
@@ -22,6 +22,7 @@
     "gatsby": "^2.0.76",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-sanity": "^1.0.3",
     "npm": "^6.7.0",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-named-capturing-groups-regex": "^7.3.0",
+    "@sentry/browser": "^4.5.4",
     "babel-jest": "^24.1.0",
     "babel-preset-gatsby": "^0.1.7",
     "eslint": "^5.11.1",

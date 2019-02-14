@@ -1,6 +1,8 @@
 @import '../styles/media-queries.css';
 @import '../styles/vars.css';
 
+.root {
+}
 .title {
   composes: responsiveTitle1 from './typography.module.css';
 }
@@ -23,15 +25,17 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 2em;
 
-  @media (--media-min-medium) {
-    grid-template-columns: 3fr 1fr;
+  @media (--motogp) {
   }
 }
 
 .mainContent {
+  grid-column-start: 2;
+  grid-column-end: 10;
+
   @nest & a {
     color: var(--color-accent);
 
@@ -41,6 +45,11 @@
       }
     }
   }
+}
+
+.metaContent {
+  grid-column-start: 10;
+  grid-column-end: 12;
 }
 
 .publishedAt {

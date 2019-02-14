@@ -64,6 +64,10 @@
       /* grid-column-start: 3;
       grid-column-end: 11; */
     }
+    &[page='project'] {
+      grid-column-start: 1;
+      grid-column-end: 13;
+    }
   }
 }
 .footer {

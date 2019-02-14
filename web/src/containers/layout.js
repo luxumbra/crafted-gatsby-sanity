@@ -1,5 +1,7 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React, { useState, useEffect } from 'react'
+import ErrorBoundary from '../components/error-boundary'
+
 import Layout from '../components/layout'
 
 import feather from 'feather-icons'
@@ -78,7 +80,8 @@ function LayoutContainer (props) {
           'Web development^1000',
           'Web design^1000',
           'Ecommerce ^1000',
-          'Hand crafted websites^700 made in the Isle of Man^400.'],
+          'Hand crafted websites^700 made in the Isle of Man^400.'
+        ],
         typeSpeed: 50,
         backDelay: 200,
         fadeOut: false,
@@ -130,14 +133,16 @@ function LayoutContainer (props) {
           )
         }
         return (
-          <Layout
-            {...props}
-            showNav={showNav}
-            companyInfo={data.companyInfo}
-            siteTitle={data.site.title}
-            onHideNav={handleHideNav}
-            onShowNav={handleShowNav}
-          />
+          <ErrorBoundary>
+            <Layout
+              {...props}
+              showNav={showNav}
+              companyInfo={data.companyInfo}
+              siteTitle={data.site.title}
+              onHideNav={handleHideNav}
+              onShowNav={handleShowNav}
+            />
+          </ErrorBoundary>
         )
       }}
     />

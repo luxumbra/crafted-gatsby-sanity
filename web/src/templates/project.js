@@ -94,7 +94,11 @@ const ProjectTemplate = props => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-      {project && <Project {...project} />}
+      {project && (
+        <Container page='project'>
+          <Project {...project} />
+        </Container>
+      )}
     </Layout>
   )
 }
