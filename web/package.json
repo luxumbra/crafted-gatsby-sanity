@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "Crafted with Sanity",
-  "version": "1.0.0",
-  "author": "Dave Sayer <hello@crafted.im>",
+  "name": "crafted-in-sanity",
+  "version": "0.2.0",
+  "author": "Dave Sayer <dave@crafted.im>",
   "scripts": {
     "build": "gatsby build",
     "deploy": "npm run now-deploy",
