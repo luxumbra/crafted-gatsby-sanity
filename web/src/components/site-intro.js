@@ -10,7 +10,7 @@ function SiteIntro () {
     <div className={styles.wrapper}>
       <div className={styles.intro}>
         <div className={styles.brand}>
-          <img className={styles.logo} src='./img/logo.svg' alt='Crafted logo' />
+          <img className={styles.logo} src='./assets/img/logo.svg' alt='Crafted logo' />
         </div>
       </div>
 
