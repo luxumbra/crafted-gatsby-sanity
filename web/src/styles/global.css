@@ -14,10 +14,17 @@
     font-size: 0.9rem;
     font-weight: 200;
 }
+.plainList {
+    list-style: none;
+    padding-left:  0;
+    margin-left: 0;
 
-.listItem {
+    @nest & li {
+        margin-left:  0;
+        padding: 0 0 1rem;
+    }
+}
+.projectItem {
   font-family: var(--leader-font);
-  font-size: 0.9rem;
-  margin-left:  0;
-  padding: 0 0 1rem;
+  font-size: 1.2rem;
 }

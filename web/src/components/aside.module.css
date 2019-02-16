@@ -1,0 +1,18 @@
+@import '../styles/vars.css';
+@import '../styles/media-queries.css';
+@import '../styles/global.css';
+
+.root,
+aside {
+    color: white;
+
+    @nest & h3 {
+        font-weight: lighter;
+        font-size: 1.6rem;
+        margin: 0 0 1rem;
+    }
+}
+
+.asideList {
+    composes: plainList from '../styles/global.css';
+}

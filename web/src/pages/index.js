@@ -133,7 +133,7 @@ const IndexPage = props => {
             />
           )}
         </section>
-        <section>
+        <section id='latest-posts'>
           {postNodes && (
             <BlogPostPreviewGrid
               title='Latest blog posts'

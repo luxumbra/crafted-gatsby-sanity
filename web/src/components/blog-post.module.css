@@ -1,8 +1,8 @@
 @import '../styles/media-queries.css';
 @import '../styles/vars.css';
 
-.root {}
-
+.root {
+}
 .title {
   composes: responsiveTitle1 from './typography.module.css';
 }
@@ -11,6 +11,10 @@
   position: relative;
   background: #eee;
   padding-bottom: calc(9 / 16 * 100%);
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  overflow: hidden;
 
   @nest & img {
     position: absolute;
@@ -25,15 +29,17 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 2em;
 
-  @media (--media-min-medium) {
-    grid-template-columns: 3fr 1fr;
+  @media (--motogp) {
   }
 }
 
 .mainContent {
+  grid-column-start: 2;
+  grid-column-end: 10;
+
   @nest & a {
     color: var(--color-accent);
 
@@ -46,11 +52,18 @@
 }
 
 .metaContent {
+  grid-column-start: 10;
+  grid-column-end: 12;
 }
 
 .publishedAt {
   composes: small from './typography.module.css';
   margin: 1.5rem 0 3rem;
+}
+
+.categoriesHeadline {
+  composes: base from './typography.module.css';
+  margin: 0.5rem 0 0;
 }
 
 .categories {

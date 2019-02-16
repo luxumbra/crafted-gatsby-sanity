@@ -29,11 +29,11 @@ function ProjectPreview (props) {
             <BlockText blocks={props._rawExcerpt} />
           </div>
         )}
-        <ul>
-          <li><i data-feather="user"></i> <span>Role in project: { props.role }</span></li>
-          <li><i data-feather="package"></i> <span>Technology used: { props.technology }</span></li>
-          <li><i data-feather="star"></i> <span>Highlights: { props.highlights }</span></li>
-          <li><i data-feather="at-sign"></i> <span>Client/Employer: { props.client }</span></li>
+        <ul className={styles.projectList}>
+          <li className={styles.info}><i data-feather="user"></i> <span>Role in project: { props.role }</span></li>
+          <li className={styles.info}><i data-feather="package"></i> <span>Technology used: { props.technology }</span></li>
+          <li className={styles.info}><i data-feather="star"></i> <span>Highlights: { props.highlights }</span></li>
+          <li className={styles.info}><i data-feather="at-sign"></i> <span>Client/Employer: { props.client }</span></li>
         </ul>
       </Link>
     </div>

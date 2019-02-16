@@ -28,16 +28,60 @@
     transition: all 0.5s ease-in-out;
 
     & h3 {
-      color: rgb(var(--color-accent));
+      color: var(--link-accent-color);
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: normal;
+      font-size: 1.2rem;
+      transition: color 0.3s ease-in-out;
+
+      @media (--motogp) {
+        font-size: 1.8rem;
+      }
     }
+
     &:hover {
       background: rgba(var(--color-main-dark), 0.1);
       box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.2);
-      border-radius: 5% 10% 30% 3%;
+      /* border-radius: 5% 10% 30% 3%; */
+      transform: scale(1.01);
 
       & h3 {
         color: var(--link-accent-color);
       }
+    }
+
+    & p {
+      font-size: var(--font-vsmall-size);
+      line-height: var(--font-vsmall-line-height);
+
+      @media (--superstock) {
+        font-size: var(--font-small-size);
+        line-height: var(--font-small-line-height);
+      }
+
+      @media (--supersport) {
+        font-size: var(--font-med-size);
+        line-height: var(--font-med-line-height);
+      }
+
+      @media (--motogp) {
+        font-size: var(--font-large-size);
+        line-height: var(--font-large-line-height);
+      }
+    }
+    & h3 .beta {
+        display: inline-flex;
+        color: rgba(255,255,255,0.4);
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        transform: rotate(-20deg);
+        transition: all 0.4s ease-in-out;
+    }
+    & h3:hover .beta {
+        color: rgba(255,255,255,0.8);
+        transform: rotate(5deg);
     }
   }
   @media (--supersport) {
@@ -65,15 +109,23 @@
     }
   }
 }
-h3 {
-  color: var(--link-accent-color);
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2rem;
-  transition: color 0.3s ease-in-out;
 
-  @media (--motogp) {
-    font-size: 2rem;
+.projectList {
+  composes: plainList from '../styles/global.css';
+}
+
+.info {
+  composes: projectItem from "../styles/global.css";
+  display: flex;
+  justify-content: flex-start;
+
+  @media (--supersport) {
+      font-size: 1rem;
   }
+  @media(--superbike) {
+      font-size: 1.1rem;
+  }
+
 }
 
 .figure {
@@ -89,20 +141,16 @@ h3 {
     max-width: 100%;
     height: auto;
     /* box-shadow: 0 0 3rem 0.5rem rgba(0,0,0,0.2); */
-    transition: transform 1.25s ease-in-out, opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0.4;
 }
 .projectThumb:hover {
     /* border-radius: 0.4rem;
     box-shadow: 0 0 3rem 0.5rem rgba(0,0,0,0.2); */
     opacity: 1;
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
 }
-h3,
-p,
-li {
-    text-align: left;
-}
+
 /* .para {
   composes: leaderP from "../styles/global.css";
 
@@ -113,58 +161,3 @@ li {
       font-size: 1.1rem;
   }
 } */
-ul {
-    list-style: none;
-    padding-left:  0;
-    margin-left: 0;
-}
-.li {
-  composes: listItem from "../styles/global.css";
-  display: flex;
-  justify-content: flex-start;
-
-  @media (--supersport) {
-      font-size: 1rem;
-  }
-  @media(--superbike) {
-      font-size: 1.1rem;
-  }
-
-}
-/* li svg {
-    min-width: 4rem;
-    font-size: 3rem;
-} */
-p {
-  font-size: var(--font-vsmall-size);
-  line-height: var(--font-vsmall-line-height);
-
-  @media (--superstock) {
-    font-size: var(--font-small-size);
-    line-height: var(--font-small-line-height);
-  }
-
-  @media (--supersport) {
-    font-size: var(--font-med-size);
-    line-height: var(--font-med-line-height);
-  }
-
-  @media (--motogp) {
-    font-size: var(--font-large-size);
-    line-height: var(--font-large-line-height);
-  }
-}
-h3 .beta {
-    display: inline-flex;
-    color: rgba(255,255,255,0.4);
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1rem;
-    font-weight: 100;
-    text-transform: uppercase;
-    transform: rotate(-20deg);
-    transition: all 0.4s ease-in-out;
-}
-h3:hover .beta {
-    color: rgba(255,255,255,0.8);
-    transform: rotate(5deg);
-}
