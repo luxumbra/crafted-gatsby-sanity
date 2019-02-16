@@ -5,6 +5,7 @@
 }
 .title {
   composes: responsiveTitle1 from './typography.module.css';
+  text-align: left;
 }
 
 .mainImage {
@@ -13,6 +14,7 @@
   padding-bottom: 66.6666vh;
   width: 100%;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 
   @nest & img {
     position: absolute;
@@ -38,6 +40,16 @@
   grid-column-start: 2;
   grid-column-end: 8;
 
+  @nest & p:first-of-type {
+    font-size: 1rem;
+
+    @media (--superstock) {
+      font-size: 1.1rem;
+    }
+    @media (--superbike) {
+      font-size: 1.3rem;
+    }
+  }
   @nest & a {
     color: rgb(var(--color-accent));
 
@@ -58,7 +70,11 @@
   grid-column-start: 9;
   grid-column-end: 12;
   font-family: var(--body-font);
-  font-size: 1.2rem;
+  font-size: 1rem;
+
+  @media (--supersport) {
+    font-size: 1.2rem;
+  }
 }
 
 .publishedAt {

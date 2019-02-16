@@ -16,7 +16,7 @@
   height: var(--header-height);
 }
 .sticky {
-  background: rgba(var(--color-main-dark), 0.8);
+  background: rgba(var(--color-main-dark), 0.9);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
   height: var(--header-height-small);
 }

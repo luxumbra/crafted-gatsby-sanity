@@ -80,19 +80,19 @@
 .paragraph, p {
   color: rgb(var(--color-white));
   font-family: var(--body-font);
-  font-size: var(--font-xsmall-size);
+  font-size: var(--font-small-size);
   font-weight: 300;
-  line-height: var(--font-xsmall-line-height);
+  line-height: var(--font-small-line-height);
   margin: 0.5rem 0 1rem 0;
 
   @media (--superstock) {
-    font-size: var(--font-small-size);
-    line-height: var(--font-small-line-height);
+    font-size: var(--font-med-size);
+    line-height: var(--font-med-line-height);
   }
 
   @media (--supersport) {
-    font-size: var(--font-med-size);
-    line-height: var(--font-med-line-height);
+    font-size: var(--font-large-size);
+    line-height: var(--font-large-line-height);
   }
 
   @media (--superbike) {
@@ -120,7 +120,7 @@
   }
 
   @media (--supersport) {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: var(--font-title1-line-height);
   }
 }
@@ -128,7 +128,7 @@
 .responsiveTitle2 {
   color: rgb(var(--color-white));
   font-family: var(--heading-font);
-  font-weight: 900;
+  font-weight: 200;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
   margin: 1.5rem 0 0.5rem;
