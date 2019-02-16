@@ -41,7 +41,7 @@ function BlogPost (props) {
             {authors && <RoleList items={authors} title='Authors' />}
             {categories && (
               <div className={styles.categories}>
-                <h3 className={styles.categoriesHeadline}>Categories</h3>
+                <h2 className={styles.categoriesHeadline}>Categories</h2>
                 <ul>
                   {categories.map(category => (
                     <li key={category._id}>{category.title}</li>

@@ -38,10 +38,10 @@
 
 .mainContent {
   grid-column-start: 2;
-  grid-column-end: 10;
+  grid-column-end: 8;
 
   @nest & a {
-    color: var(--color-accent);
+    color: rgb(var(--color-accent));
 
     @media (hover: hover) {
       @nest &:hover {
@@ -49,20 +49,27 @@
       }
     }
   }
+
+  @nest & li {
+    color: rgb(var(--color-white));
+    font-size: 1rem;
+  }
 }
 
 .metaContent {
-  grid-column-start: 10;
+  grid-column-start: 9;
   grid-column-end: 12;
+  font-family: var(--body-font);
+  font-size: 1.2rem;
 }
 
 .publishedAt {
-  composes: small from './typography.module.css';
+  /* composes: large from './typography.module.css'; */
   margin: 1.5rem 0 3rem;
 }
 
 .categoriesHeadline {
-  composes: base from './typography.module.css';
+  /* composes: base from './typography.module.css'; */
   margin: 0.5rem 0 0;
 }
 

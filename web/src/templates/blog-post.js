@@ -87,8 +87,7 @@ const BlogPostTemplate = props => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-
-      {post && <BlogPost {...post} />}
+      <Container page='post'>{post && <BlogPost {...post} />}</Container>
     </Layout>
   )
 }

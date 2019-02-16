@@ -11,7 +11,7 @@
 
   --copy-color-main: rgb(var(--color-white));
   --link-color: rgba(var(--color-white), var(--linkO));
-  --link-hover-color: rgba(var(--color-accent), var(--hoverO));
+  --link-hover-color: rgba(var(--color-accent), var(--linkO));
   --link-accent-color: rgba(var(--color-accent), var(--linkO));
   --link-accent-hover-color: rgba(var(--color-accent), var(--hoverO));
   --link-hover-color-footer: rgb(var(--color-accent));

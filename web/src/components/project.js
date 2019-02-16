@@ -30,7 +30,7 @@ function Project (props) {
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
-            {_rawBody && <BlockContent blocks={_rawBody || []} />}
+            {_rawBody && <BlockContent blocks={_rawBody} />}
           </div>
           <aside className={styles.metaContent}>
             {publishedAt && (
