@@ -50,6 +50,11 @@ export const query = graphql`
           slug {
             current
           }
+          betaProject
+          highlights
+          technology
+          client
+          role
         }
       }
     }

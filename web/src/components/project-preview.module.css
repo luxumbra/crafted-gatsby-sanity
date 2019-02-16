@@ -47,6 +47,7 @@
     & p {
       font-size: var(--font-vsmall-size);
       line-height: var(--font-vsmall-line-height);
+      text-align: left;
 
       @media (--superstock) {
         font-size: var(--font-small-size);
@@ -67,7 +68,7 @@
         display: inline-flex;
         color: rgba(255,255,255,0.4);
         font-family: 'Ubuntu', sans-serif;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 100;
         text-transform: uppercase;
         transform: rotate(-20deg);
@@ -106,15 +107,20 @@
 
 .projectList {
   composes: plainList from '../styles/global.css';
+  text-align: left;
+
+  @nest & li {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .info {
   composes: projectItem from "../styles/global.css";
-  display: flex;
-  justify-content: flex-start;
 
   @media (--supersport) {
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
   @media(--superbike) {
       font-size: 1rem;
@@ -122,6 +128,7 @@
 
   @nest & svg {
     padding-right: 0.5rem;
+    min-width: 4rem;
   }
 
 }

@@ -22,17 +22,27 @@ function ProjectPreview (props) {
             />
           </figure>
         )}
-        <h3 className={responsiveTitle3}>{props.title}</h3>
+        <h3 className={responsiveTitle3}>
+          {props.title} {props.betaProject && (<span className={styles.beta}>Beta</span>)}
+        </h3>
         {props._rawExcerpt && (
           <div className={styles.excerpt}>
             <BlockText blocks={props._rawExcerpt} />
           </div>
         )}
         <ul className={styles.projectList}>
-          <li className={styles.info}><i data-feather="user"></i> <span>Role in project: { props.role }</span></li>
-          <li className={styles.info}><i data-feather="package"></i> <span>Technology used: { props.technology }</span></li>
-          <li className={styles.info}><i data-feather="star"></i> <span>Highlights: { props.highlights }</span></li>
-          <li className={styles.info}><i data-feather="at-sign"></i> <span>Client/Employer: { props.client }</span></li>
+          <li className={styles.info}>
+            <i data-feather='user' /> <span>Role in project: {props.role}</span>
+          </li>
+          <li className={styles.info}>
+            <i data-feather='package' /> <span>Technology used: {props.technology}</span>
+          </li>
+          <li className={styles.info}>
+            <i data-feather='star' /> <span>Highlights: {props.highlights}</span>
+          </li>
+          <li className={styles.info}>
+            <i data-feather='at-sign' /> <span>Client/Employer: {props.client}</span>
+          </li>
         </ul>
       </Link>
     </div>

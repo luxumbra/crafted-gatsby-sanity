@@ -7,7 +7,7 @@
 
 .brand {
   width: 60%;
-  max-width: 420px;
+  max-width: 350px;
   margin: 0 auto;
 
   @nest & .logo {
@@ -75,17 +75,13 @@ blockquote {
     }
   }
   @media (--motogp) {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 
     @nest & footer {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      padding-top: 0.5rem;
     }
   }
-}
-
-blockquote .large {
-  font-size: 5rem;
-  font-weight: bold;
 }
 
 .precis {
@@ -100,7 +96,7 @@ blockquote .large {
     font-size: 2.5rem;
   }
   @media (--superbike) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 .intro p {

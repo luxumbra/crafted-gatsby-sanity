@@ -19,6 +19,11 @@ export default {
       }
     },
     {
+      name: 'betaProject',
+      title: 'Is this a Beta Project?',
+      type: 'boolean'
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule projects where you show them',
@@ -64,23 +69,25 @@ export default {
     {
       name: 'highlights',
       title: 'Highlights',
-      type: 'text',
+      type: 'string',
       description: 'In one or two sentances, what were the best bits?'
     },
     {
       name: 'role',
       title: 'Role',
-      type: 'text'
+      type: 'string',
+      description: 'What was your role on the project?'
     },
     {
       name: 'client',
       title: 'Client',
-      type: 'string'
+      type: 'string',
+      description: 'Who was the project for?'
     },
     {
       name: 'technology',
       title: 'Technology',
-      type: 'text',
+      type: 'string',
       description: 'What key technologies did you use?'
     },
     {
