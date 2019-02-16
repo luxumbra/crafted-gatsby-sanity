@@ -2,28 +2,20 @@
 @import '../styles/vars.css';
 
 .root {
+
+}
+.postsList {
   display: flex;
   align-content: space-between;
   justify-content: flex-start;
   flex-wrap: wrap;
   min-height: 1px;
 }
+.headline {
+  composes: sectionTitle from '../styles/global.css';
+  margin: 2rem 0;
+}
 
 .browseMoreNav {
-  composes: small from './typography.module.css';
-  margin-top: 1rem;
-  text-align: right;
-
-  @nest & a {
-    display: inline-block;
-    padding: 0.5rem 0;
-    color: inherit;
-    text-decoration: none;
-
-    @media (hover: hover) {
-      @nest &:hover {
-        color: var(--color-accent);
-      }
-    }
-  }
+  composes: moreNav from '../styles/global.css';
 }

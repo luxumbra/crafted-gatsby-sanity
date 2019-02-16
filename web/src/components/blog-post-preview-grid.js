@@ -8,19 +8,21 @@ function BlogPostPreviewGrid (props) {
   return (
     <>
       <div className={styles.root}>
-        {/* {props.title && (
+        {props.title && (
           <h2 className={styles.headline}>
-            {props.browseMoreHref ? (
+            {/* {props.browseMoreHref ? (
               <Link to={props.browseMoreHref}>{props.title}</Link>
-            ) : (
-              props.title
-            )}
+            ) : ( */}
+            {props.title}
+            {/* )} */}
           </h2>
-        )} */}
-        {props.nodes &&
-          props.nodes.map(node => (
-            <BlogPostPreview key={node.id} {...node} />
-          ))}
+        )}
+        <div className={styles.postsList}>
+          {props.nodes &&
+            props.nodes.map(node => (
+              <BlogPostPreview key={node.id} {...node} />
+            ))}
+        </div>
       </div>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>

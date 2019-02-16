@@ -7,25 +7,26 @@ import styles from './project-preview-grid.module.css'
 function ProjectPreviewGrid (props) {
   return (
     <div className={styles.root}>
-      {/* {props.title && (
+      {props.title && (
         <h2 className={styles.headline}>
-          {props.browseMoreHref ? (
+          {/* {props.browseMoreHref ? (
             <Link to={props.browseMoreHref}>{props.title}</Link>
-          ) : (
-            props.title
-          )}
+          ) : ( */}
+          {props.title}
+          {/* )} */}
         </h2>
-      )} */}
-      {/* <ul className={styles.grid}> */}
-      {props.nodes &&
-        props.nodes.map(node => (
-          <ProjectPreview key={node.id} {...node} />
-        ))}
-      {props.browseMoreHref && (
-        <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Browse more</Link>
-        </div>
       )}
+      <div className={styles.projectsList}>
+        {props.nodes &&
+          props.nodes.map(node => (
+            <ProjectPreview key={node.id} {...node} />
+          ))}
+        {props.browseMoreHref && (
+          <div className={styles.browseMoreNav}>
+            <Link to={props.browseMoreHref}>Browse more</Link>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

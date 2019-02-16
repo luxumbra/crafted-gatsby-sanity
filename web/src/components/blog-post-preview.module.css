@@ -19,19 +19,26 @@
     display: block;
     max-height: 100%;
     padding: 1.5rem;
-    max-height: 100%;
     overflow: hidden;
     border-radius: 3% 7% 20% 1%;
-    transition: all 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out;
 
     & h3 {
       color: rgb(var(--color-accent));
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: normal;
+      font-size: 1.2rem;
+
+      @media (--motogp) {
+        font-size: 1.4rem;
+      }
+
     }
     &:hover {
-      background: rgba(var(--color-main-dark), 0.1);
-      box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.2);
+      /* background: rgba(var(--color-main-dark), 0.1); */
+      /* box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0,0.2); */
       /* border-radius: 5% 10% 30% 3%; */
-      transform: scale(1.02);
+      /* transform: scale(1.02); */
 
       & h3 {
         /* color: var(--link-accent-color); */
@@ -72,7 +79,7 @@
 .leadMediaThumb {
   position: relative;
   padding-bottom: 66.666%;
-  background: #eee;
+  overflow: hidden;
 
   @nest & img {
     position: absolute;
@@ -81,6 +88,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+
+    @nest .root > a:hover & {
+      transform: scale(1.03);
+      box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    }
   }
 }
 
@@ -96,8 +110,12 @@
 .excerpt {
   @nest & p {
     font-family: var(--leader-font);
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     margin: 0.5em 0;
+
+    @media (--superbike) {
+      font-size: 1rem;
+    }
   }
 
   @nest & strong {

@@ -1,4 +1,5 @@
 @import './vars.css';
+@import './media-queries.css';
 
 .bodyProps {
     background-color: #00444c;
@@ -7,6 +8,23 @@
     font-family: 'Ubuntu', sans-serif;
     font-display: fallback;
     font-size: 14px;
+}
+.sectionTitle {
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    font-weight: 100;
+
+    @media (--superstock) {
+        font-size: 1.4rem;
+    }
+
+    @media (--supersport) {
+        font-size: 1.6rem;
+    }
+
+    @media (--superbike) {
+        font-size: 1.8rem;
+    }
 }
 
 .leaderP {
@@ -22,9 +40,40 @@
     @nest & li {
         margin-left:  0;
         padding: 0 0 1rem;
+        margin-bottom: 0;
     }
 }
 .projectItem {
   font-family: var(--leader-font);
   font-size: 1.2rem;
+}
+
+.moreNav {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    @nest & a {
+      background: rgb(var(--color-accent));
+      color: rgb(var(--color-white));
+      font-weight: normal;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: all 0.3s ease-in-out;
+
+      @media (hover: hover) {
+        @nest &:hover {
+          background: rgba(var(--color-main, --link0));
+          color: rgba(var(--color-white, --link0));
+        }
+      }
+    }
+
+    @media (--superbike) {
+      font-size: 1.4rem;
+    }
 }

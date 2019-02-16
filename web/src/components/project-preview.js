@@ -12,14 +12,13 @@ function ProjectPreview (props) {
     <div className={cn(styles.root, styles.projectSummary)}>
       <Link to={`/project/${props.slug.current}`}>
         {props.mainImage && props.mainImage.asset && (
-          <figure className={styles.figure}>
+          <figure className={cn(styles.figure, styles.projectThumb)}>
             <img
               src={imageUrlFor(buildImageObj(props.mainImage))
                 .width(600)
                 .height(Math.floor((9 / 16) * 600))
                 .url()}
               alt={props.mainImage.alt}
-              className={styles.projectThumb}
             />
           </figure>
         )}
