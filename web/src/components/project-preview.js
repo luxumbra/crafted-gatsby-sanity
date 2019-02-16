@@ -15,8 +15,9 @@ function ProjectPreview (props) {
           <figure className={cn(styles.figure, styles.projectThumb)}>
             <img
               src={imageUrlFor(buildImageObj(props.mainImage))
-                .width(600)
+                .width(700)
                 .height(Math.floor((9 / 16) * 600))
+                .fit('crop')
                 .url()}
               alt={props.mainImage.alt}
             />

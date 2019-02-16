@@ -80,6 +80,10 @@
         grid-row-start: 2;
       }
     }
+    &[page='post'] {
+      grid-column-start: 1;
+      grid-column-end: 13;
+    }
   }
 }
 .footer {
