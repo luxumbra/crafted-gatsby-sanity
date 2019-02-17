@@ -18,9 +18,9 @@
   --font-large-size: calc(16 / var(--base-unit) * 1rem);
   --font-large-line-height: calc(24 / 16);
   --font-xlarge-size: calc(19 / var(--base-unit) * 1rem);
-  --font-xlarge-line-height: calc(24 / 19);
+  --font-xlarge-line-height: calc(26 / 19);
   --font-xxlarge-size: calc(22 / var(--base-unit) * 1rem);
-  --font-xxlarge-line-height: calc(24 / 22);
+  --font-xxlarge-line-height: calc(28 / 22);
   --font-title3-size: calc(19 / var(--base-unit) * 1rem);
   --font-title3-line-height: calc(28 / 19);
   --font-title2-size: calc(26 / var(--base-unit) * 1rem);
@@ -87,7 +87,7 @@
 
   @media (--superstock) {
     font-size: var(--font-med-size);
-    line-height: var(--font-med-line-height);
+    line-height: var(--font-large-line-height);
   }
 
   @media (--supersport) {

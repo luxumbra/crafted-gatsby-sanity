@@ -22,13 +22,17 @@
 .sticky {
   background: rgba(var(--color-main-dark), 0.9);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
-  height: var(--header-height-vsmall);
+  height: var(--header-height-xsmall);
+
+  @media (--superstock) {
+    height: var(--header-height-small);
+  }
 
   @media (--supersport) {
-    height: var(--header-height-xsmall);
+    height: var(--header-height-small);
   }
   @media (--superbike) {
-    height: var(--header-height-xsmall);
+    height: var(--header-height-small);
   }
   @media (--motogp) {
     height: var(--header-height-small);
@@ -90,9 +94,9 @@
     }
   }
   @media (--motogp) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     @nest .sticky & {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   }
 }
@@ -160,10 +164,10 @@
     }
   }
   @media (--motogp) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
     @nest .sticky & {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   }
 
