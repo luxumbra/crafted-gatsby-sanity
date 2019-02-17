@@ -8,7 +8,6 @@ aside {
     padding-top: 0.5rem;
     @nest & h3 {
         font-weight: lighter;
-        font-size: 1.6rem;
         margin: 0 0 1rem;
     }
 
@@ -21,7 +20,6 @@ aside {
     composes: plainList from '../styles/global.css';
     width: 100%;
     @nest & li {
-        font-size: 1rem;
         padding-bottom: 0;
 
         & a {

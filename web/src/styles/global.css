@@ -38,9 +38,15 @@
     margin-left: 0;
 
     @nest & li {
+        font-size: 0.8rem;
         margin-left:  0;
-        padding: 0 0 1rem;
+        padding: 0 0 .5rem;
         margin-bottom: 0;
+
+        @media (--supersport) {
+            font-size: 1rem;
+            padding-bottom: 0.5rem
+        }
     }
 }
 .projectItem {
