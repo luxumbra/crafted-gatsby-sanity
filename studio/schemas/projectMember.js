@@ -17,8 +17,11 @@ export default {
       options: {
         layout: 'radio',
         list: [
+          { title: 'Client', value: 'client' },
+          { title: 'Employer', value: 'employer' },
           { title: 'Designer', value: 'designer' },
           { title: 'Developer', value: 'developer' },
+          { title: 'SysOps', value: 'SysOps' },
           { title: 'Editor', value: 'editor' },
           { title: 'Manager', value: 'manager' }
         ]

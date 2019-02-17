@@ -32,18 +32,21 @@ function Project (props) {
             {_rawBody && <BlockContent blocks={_rawBody} />}
           </div>
           <aside className={styles.metaContent}>
-            {publishedAt && (
+            {/* {publishedAt && (
               <div className={styles.publishedAt}>
-                {differenceInDays(new Date(publishedAt), new Date()) > 3
-                  ? distanceInWords(new Date(publishedAt), new Date())
-                  : format(new Date(publishedAt), 'MMMM Do YYYY')}
+                <p>
+                  This p was published &nbsp;
+                  {differenceInDays(new Date(publishedAt), new Date()) > 3
+                    ? distanceInWords(new Date(publishedAt), new Date())
+                    : format(new Date(publishedAt), 'MMMM Do YYYY')}
+                </p>
               </div>
-            )}
-            {members && <RoleList items={members} title='Authors' />}
+            )} */}
+            {members && <RoleList items={members} title='Project team' />}
             {categories && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
-                <ul>
+                <ul className={styles.asideList}>
                   {categories.map(category => (
                     <li key={category._id}>{category.title}</li>
                   ))}
@@ -53,7 +56,7 @@ function Project (props) {
             {relatedProjects && (
               <div className={styles.relatedProjects}>
                 <h3 className={styles.relatedProjectsHeadline}>Related projects</h3>
-                <ul>
+                <ul className={styles.asideList}>
                   {relatedProjects.map(project => (
                     <li key={`related_${project._id}`}>
                       <Link to={`/project/${project.slug.current}`}>{project.title}</Link>

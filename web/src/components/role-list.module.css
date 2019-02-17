@@ -6,7 +6,7 @@
 }
 
 .headline {
-  composes: base from './typography.module.css';
+  composes: responsiveTitle3 from './typography.module.css';
   margin: 0.5rem 0 0;
 }
 

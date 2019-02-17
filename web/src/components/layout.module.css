@@ -117,8 +117,12 @@
       padding: .5rem 1rem;
     }
     & span {
-      display: inline;
+      display: none;
       box-sizing: border-box;
+
+      @media (--supersport) {
+        display: inline;
+      }
     }
   }
 }
