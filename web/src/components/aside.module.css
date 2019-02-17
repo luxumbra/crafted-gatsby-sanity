@@ -5,11 +5,15 @@
 .root,
 aside {
     color: white;
-
+    padding-top: 0.5rem;
     @nest & h3 {
         font-weight: lighter;
         font-size: 1.6rem;
         margin: 0 0 1rem;
+    }
+
+    @media (--motogp) {
+        padding-top: 1.5rem;
     }
 }
 

@@ -123,7 +123,7 @@
     top: var(--header-height);
 
     @nest .sticky & {
-      top: 3em;
+      top: var(--header-height-small);
     }
     @nest & ul {
       padding: 1rem 0;

@@ -2,3 +2,7 @@
 .category-list {
     color: rgb(var(--color-white));
 }
+.categoryTitle {
+    composes: responsiveTitle3 from './typography.module.css';
+    margin: 1rem 0 0;
+}

@@ -15,7 +15,7 @@ function SiteIntro () {
       </div>
 
       <div className={styles.lead}>
-        <span id='typed' className={cn(styles.typed, `typed typed-fade-out`)} typed />
+        <span id='typed' className={cn(styles.typed)} />
       </div>
 
       <div className={styles.precis}>

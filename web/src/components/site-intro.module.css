@@ -50,6 +50,7 @@ blockquote {
 
   @nest & footer {
     font-size: 0.7rem;
+    margin-top: 0.5rem;
   }
 
   @media (--superstock) {
@@ -79,7 +80,6 @@ blockquote {
 
     @nest & footer {
       font-size: 1rem;
-      padding-top: 0.5rem;
     }
   }
 }

@@ -57,7 +57,7 @@ const BlogPage = props => {
       </Container>
       <aside className={aside.root}>
         <div className={categories.categoryList}>
-          <h3>Categories</h3>
+          <h3 className={categories.categoryTitle}>Categories</h3>
           <ul className={aside.asideList}>
             <li>
               <a href='.'>Web Dev</a>
