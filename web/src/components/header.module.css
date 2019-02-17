@@ -73,12 +73,21 @@
   }
   @media (--superstock) {
     font-size: 1rem;
+    @nest .sticky & {
+      font-size: 0.9rem;
+    }
   }
   @media (--supersport) {
     font-size: 1rem;
+    @nest .sticky & {
+      font-size: 0.9rem;
+    }
   }
   @media (--superbike) {
     font-size: 1.2rem;
+    @nest .sticky & {
+      font-size: 1.1rem;
+    }
   }
   @media (--motogp) {
     font-size: 1.5rem;
@@ -133,13 +142,22 @@
   }
   @media (--superstock) {
     font-size: 1rem;
+    @nest .sticky & {
+      font-size: 0.8rem;
+    }
   }
   @media (--supersport) {
     font-size: 1rem;
+    @nest .sticky & {
+      font-size: 0.8rem;
+    }
   }
 
   @media (--superbike) {
     font-size: 1.2rem;
+    @nest .sticky & {
+      font-size: 1.1rem;
+    }
   }
   @media (--motogp) {
     font-size: 1.5rem;
