@@ -38,7 +38,14 @@
 
 .mainContent {
   grid-column-start: 2;
-  grid-column-end: 8;
+  grid-column-end: 12;
+
+  @media (--superbike) {
+    grid-column-start: 2;
+    grid-column-end: 8;
+  }
+
+  @media
 
   @nest & p:first-of-type {
     font-size: 1rem;
@@ -67,12 +74,14 @@
 }
 
 .metaContent {
-  grid-column-start: 9;
+  grid-column-start: 2;
   grid-column-end: 12;
   font-family: var(--body-font);
   font-size: 1rem;
 
-  @media (--supersport) {
+  @media (--superbike) {
+    grid-column-start: 9;
+    grid-column-end: 12;
     font-size: 1.2rem;
   }
 }
