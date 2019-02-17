@@ -179,6 +179,15 @@
         display: inline;
       }
     }
+
+    & > svg {
+      width: 15px;
+      height: auto;
+
+      @media (--superstock) {
+        width: 24px;
+      }
+    }
   }
 }
 

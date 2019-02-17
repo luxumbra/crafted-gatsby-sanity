@@ -13,12 +13,26 @@
   top: 0;
   left: 0;
   right: 0;
-  height: var(--header-height);
+  height: var(--header-height-small);
+
+  @media (--motogp) {
+    height: var(--header-height);
+  }
 }
 .sticky {
   background: rgba(var(--color-main-dark), 0.9);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
-  height: var(--header-height-small);
+  height: var(--header-height-vsmall);
+
+  @media (--supersport) {
+    height: var(--header-height-xsmall);
+  }
+  @media (--superbike) {
+    height: var(--header-height-xsmall);
+  }
+  @media (--motogp) {
+    height: var(--header-height-small);
+  }
 }
 .wrapper {
   box-sizing: border-box;
@@ -31,17 +45,18 @@
   @nest .sticky & {
     padding: 0.5em;
   }
-  @media (--media-min-small) {
+  @media (--superstock) {
     padding: 1.5em 1.5em;
   }
 }
 
 .branding {
   font-family: var(--brand-font);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 100;
   margin: 0;
   flex: 1;
+  transition: all 0.3s ease-in-out;
 
   @nest & a {
     display: inline-block;
@@ -56,11 +71,20 @@
       }
     }
   }
+  @media (--superstock) {
+    font-size: 1rem;
+  }
   @media (--supersport) {
+    font-size: 1rem;
+  }
+  @media (--superbike) {
     font-size: 1.2rem;
   }
-  @media (--supersbike) {
+  @media (--motogp) {
     font-size: 1.5rem;
+    @nest .sticky & {
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -70,7 +94,7 @@
   border: none;
   background: none;
   margin: 0;
-  padding: calc(14 / 17 / 2 * 1rem);
+  padding: calc(14 / 17 / 2 * .5rem);
   outline: none;
 
   @nest & svg {
@@ -87,7 +111,7 @@
   color: var(--nav-link);
   transition: all 0.3s ease-in-out;
   font-family: var(--brand-font);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 100;
 
   @nest & ul {
@@ -107,14 +131,25 @@
       color: var(--nav-link-hover);
     }
   }
-  @media (--supersport) {
-    font-size: 1.2rem;
+  @media (--superstock) {
+    font-size: 1rem;
   }
-  @media (--supersbike) {
-    font-size: 1.5rem;
+  @media (--supersport) {
+    font-size: 1rem;
   }
 
-  @media (--media-max-medium) {
+  @media (--superbike) {
+    font-size: 1.2rem;
+  }
+  @media (--motogp) {
+    font-size: 1.5rem;
+
+    @nest .sticky & {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (--max-superstock) {
     position: absolute;
     background: rgba(var(--color-main-dark), 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
