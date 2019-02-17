@@ -122,3 +122,26 @@
   composes: responsiveTitle3 from './typography.module.css';
   margin: 0.5rem 0 0;
 }
+.viewSiteNav {
+  composes: moreNav from '../styles/global.css';
+  text-align: left;
+  font-size: 0.9rem;
+
+  @nest & svg {
+    width: 15px;
+    height: auto;
+    padding-left: 5px;
+    transition: all 0.3s ease-in-out;
+    vertical-align: top;
+  }
+
+  @nest &:hover {
+    & svg {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (--superbike) {
+    font-size: 1rem;
+  }
+}

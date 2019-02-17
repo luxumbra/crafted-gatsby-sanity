@@ -10,7 +10,16 @@ import RoleList from './role-list'
 import styles from './project.module.css'
 
 function Project (props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
+  const {
+    _rawBody,
+    title,
+    categories,
+    mainImage,
+    members,
+    projectURL,
+    publishedAt,
+    relatedProjects
+  } = props
   return (
     <article className={styles.root}>
       {props.mainImage && mainImage.asset && (
@@ -42,6 +51,9 @@ function Project (props) {
                 </p>
               </div>
             )} */}
+            <div className={styles.viewSiteNav}>
+              <a href={projectURL} target='_blank' rel='noopener'>Visit the website <i data-feather='external-link'/></a>
+            </div>
             {members && <RoleList items={members} title='Project team' />}
             {categories && (
               <div className={styles.categories}>
