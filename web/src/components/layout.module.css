@@ -6,7 +6,6 @@
   min-height: calc(100% - var(--header-height) - var(--footer-height));
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
-  min-height: 95vh;
   width: 100%;
 }
 .grid {

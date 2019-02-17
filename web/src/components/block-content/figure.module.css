@@ -9,6 +9,7 @@
 }
 
 .caption {
-  composes: small from '../typography.module.css';
+  composes: large from '../typography.module.css';
+  color: rgb(var(--color-white));
   margin-top: 0.5rem;
 }

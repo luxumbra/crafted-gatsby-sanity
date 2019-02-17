@@ -42,7 +42,7 @@ function BlogPost (props) {
             {categories && (
               <div className={styles.categories}>
                 <h2 className={styles.categoriesHeadline}>Categories</h2>
-                <ul>
+                <ul className={styles.asideList}>
                   {categories.map(category => (
                     <li key={category._id}>{category.title}</li>
                   ))}

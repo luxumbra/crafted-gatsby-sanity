@@ -1,3 +1,4 @@
+@import './media-queries.css';
 @import './vars.css';
 html {
   @nest &.sr {
@@ -54,36 +55,7 @@ nav {
     }
   }
 }
-/* blockquote {
-  font-family: 'Roboto Slab', sans-serif;
-  font-display: swap;
-  font-size: 1.3rem;
-  font-weight: 200;
-  text-align: justify-all;
 
-  @nest & footer {
-    font-size: 1rem;
-  }
-  @media (--media-min-large) {
-    font-size: 1.8rem;
-
-    @nest & footer {
-      font-size: 1.2rem;
-    }
-  }
-  @media (--media-min-xlarge) {
-    font-size: 2.2rem;
-
-    @nest & footer {
-      font-size: 1.4rem;
-    }
-  }
-} */
-
-/* blockquote .large {
-  font-size: 5rem;
-  font-weight: bold;
-} */
 .precis {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -127,20 +99,6 @@ nav {
 .avatar:hover {
   opacity: 0.8;
 }
-.tech-used {
-  list-style: none;
-  padding-left: 0;
-  width: 100%;
-}
-.tech-used li {
-  font-size: 3rem;
-  padding: 2rem;
-}
-@media (min-width: 768px) {
-  .tech-used li {
-      font-size: 5rem;
-  }
-}
 
 footer {
 
@@ -159,11 +117,16 @@ footer {
   animation: bounce 2s infinite;
 }
 .pulse {
+  display: none;
   position: sticky;
   width: 4rem;
   height:  4rem;
   bottom: 3rem;
   background: transparent;
+
+  @media (--supersport) {
+    display: inline;
+  }
 }
 .pulse span {
     position: absolute;

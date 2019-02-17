@@ -59,19 +59,19 @@ blockquote {
       font-size: 0.9rem;
     }
   }
-  @media (--supersport) {
+  /* @media (--supersport) {
     font-size: 1.4rem;
     margin: 2rem 1rem;
 
     @nest & footer {
       font-size: 1.2rem;
     }
-  }
+  } */
   @media (--superbike) {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 
     @nest & footer {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
   @media (--motogp) {

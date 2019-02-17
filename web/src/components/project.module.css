@@ -101,7 +101,7 @@
 }
 
 .relatedProjects {
-  border-top: 1px solid var(--color-black);
+  border-top: 1px solid rgb(var(--color-white));
   margin: 2rem 0 3rem;
 
   @nest & ul {
