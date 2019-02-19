@@ -3,7 +3,7 @@
 
 .bodyProps {
     background-color: #00444c;
-    background: radial-gradient(ellipse at center, #00444c 1%,#001f23 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: radial-gradient(ellipse at center, #000 1%,#001f23 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
     font-display: fallback;
