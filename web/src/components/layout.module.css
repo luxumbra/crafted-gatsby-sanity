@@ -2,7 +2,7 @@
 @import '../styles/vars.css';
 
 .content {
-  background: radial-gradient(ellipse at top, rgb(var(--color-main)) 25%, rgb(var(--color-main-dark)) 100%);
+  background: radial-gradient(ellipse at top, rgb(var(--color-main)) 10%, rgb(var(--color-main-dark)) 100%);
   min-height: calc(100% - var(--header-height) - var(--footer-height));
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);

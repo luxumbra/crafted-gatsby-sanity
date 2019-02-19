@@ -57,7 +57,7 @@
 .branding {
   font-family: var(--brand-font);
   font-size: 0.8rem;
-  font-weight: 100;
+  font-weight: bold;
   margin: 0;
   flex: 1;
   transition: all 0.3s ease-in-out;
@@ -125,7 +125,7 @@
   transition: all 0.3s ease-in-out;
   font-family: var(--brand-font);
   font-size: 0.8rem;
-  font-weight: 100;
+  font-weight: bold;
 
   @nest & ul {
     margin: 0;
