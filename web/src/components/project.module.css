@@ -14,7 +14,7 @@
   padding-bottom: 66.6666vh;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 
   @nest & img {
     position: absolute;

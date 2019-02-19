@@ -21,7 +21,7 @@
 }
 .sticky {
   background: rgba(var(--color-main-dark), 0.9);
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.8);
   height: var(--header-height-xsmall);
 
   @media (--superstock) {

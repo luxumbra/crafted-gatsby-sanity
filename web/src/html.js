@@ -14,8 +14,8 @@ export default class HTML extends React.Component {
           <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
           <link rel='manifest' href='/site.webmanifest' />
           <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#cf142b' />
-          <meta name='msapplication-TileColor' content='#cf142b' />
-          <meta name='theme-color' content='#cf142b' />
+          <meta name='msapplication-TileColor' content='#181717' />
+          <meta name='theme-color' content='#181717' />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
