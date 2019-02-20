@@ -9,9 +9,9 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
 
   <header className={cn(styles.root, styles.fixed)}>
     <div className={styles.wrapper}>
-      <h1 className={styles.branding}>
-        <Link to='/'>{siteTitle}</Link>
-      </h1>
+      <span className={styles.branding}>
+        <Link to='/'><img src='/assets/img/crafted-text-logo.png' alt='CrafteD logo' /></Link>
+      </span>
 
       <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
         <Icon symbol='hamburger' />
