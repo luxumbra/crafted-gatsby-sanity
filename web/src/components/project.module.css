@@ -141,8 +141,18 @@
     }
   }
 
-  @media (--superbike) {
-    text-align: left;
+  @media (--superstock) {
     font-size: 1rem;
+    text-align: left;
+  }
+
+  @media (--supersport) {
+      font-size: 1rem;
+      text-align: left;
+  }
+
+  @media (--superbike) {
+    font-size: 1rem;
+    text-align: left;
   }
 }
