@@ -64,11 +64,13 @@
     @nest & a {
       background: rgb(var(--color-accent));
       color: rgb(var(--color-white));
+      font-family: var(--body-font);
       font-weight: normal;
       display: inline-block;
       padding: 0.5rem 1rem;
       text-decoration: none;
       border-radius: 3px;
+      text-transform: uppercase;
       transition: all 0.3s ease-in-out;
 
       @media (hover: hover) {
@@ -77,5 +79,16 @@
           color: rgba(var(--color-white, --link0));
         }
       }
+    }
+    @media (--superstock) {
+        font-size: 1rem;
+    }
+
+    @media (--supersport) {
+        font-size: 1.2rem;
+    }
+
+    @media (--superbike) {
+        font-size: 1.2rem;
     }
 }
