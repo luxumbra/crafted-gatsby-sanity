@@ -25,11 +25,11 @@
   height: var(--header-height-xsmall);
 
   @media (--superstock) {
-    height: var(--header-height-small);
+    height: var(--header-height-xsmall);
   }
 
   @media (--supersport) {
-    height: var(--header-height-small);
+    height: var(--header-height-xsmall);
   }
   @media (--superbike) {
     height: var(--header-height-small);
