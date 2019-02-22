@@ -126,7 +126,11 @@
   composes: moreNav from '../styles/global.css';
   text-align: left;
   font-size: 0.9rem;
+  text-transform: none;
 
+  @nest & a {
+    text-transform: none;
+  }
   @nest & svg {
     width: 15px;
     height: auto;

@@ -18,16 +18,4 @@
 
 .browseMoreNav {
   composes: moreNav from '../styles/global.css';
-
-  @media (--superstock) {
-    font-size: 1rem;
-  }
-
-  @media (--supersport) {
-      font-size: 1.2rem;
-  }
-
-  @media (--superbike) {
-    font-size: 1.4rem;
-  }
 }
