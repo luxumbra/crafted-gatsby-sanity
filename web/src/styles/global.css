@@ -15,15 +15,15 @@
     font-weight: 100;
 
     @media (--superstock) {
-        font-size: 1.4rem;
-    }
-
-    @media (--supersport) {
         font-size: 1.6rem;
     }
 
-    @media (--superbike) {
+    @media (--supersport) {
         font-size: 1.8rem;
+    }
+
+    @media (--superbike) {
+        font-size: 2.4rem;
     }
 }
 
@@ -81,14 +81,14 @@
       }
     }
     @media (--superstock) {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     @media (--supersport) {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     @media (--superbike) {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }

@@ -23,8 +23,8 @@
   --leader-font: 'Roboto', sans-serif;
   --brand-font: 'Roboto Slab', sans-serif;
 
-  --header-height: 10vh;
-  --header-height-small: 7vh;
-  --header-height-xsmall: 5vh;
-  --footer-height: 5vh;
+  --header-height: 75px;
+  --header-height-small: 60px;
+  --header-height-xsmall: 50px;
+  --footer-height: 40px;
 }
