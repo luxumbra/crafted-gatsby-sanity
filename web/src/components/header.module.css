@@ -56,17 +56,15 @@
 }
 
 .branding {
-  /* align-self: flex-start; */
-  /* align-content: center; */
   font-family: var(--brand-font);
   font-size: 0.8rem;
   font-weight: bold;
   margin: 0;
-  /* flex: 1; */
   transition: all 0.3s ease-in-out;
 
   @nest & a {
-    display: inline-block;
+    display: flex;
+    align-content: center;
     padding: 0;
     color: var(--nav-link);
     text-decoration: none;
@@ -82,8 +80,6 @@
       width: auto;
       max-width: 100px;
       max-height: 80%;
-      vertical-align: middle;
-      /* display: none; */
     }
   }
   @media (--superstock) {
