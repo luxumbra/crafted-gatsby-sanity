@@ -66,8 +66,8 @@
 }
 
 .metaContent {
-  grid-column-start: 3;
-  grid-column-end: 11;
+  grid-column-start: 2;
+  grid-column-end: 12;
   font-family: var(--body-font);
   font-size: 1.2rem;
 

@@ -38,13 +38,13 @@
     margin-left: 0;
 
     @nest & li {
-        font-size: 0.8rem;
+        font-size: var(--font-med-size);
         margin-left:  0;
         padding: 0 0 .5rem;
         margin-bottom: 0;
 
         @media (--supersport) {
-            font-size: 1rem;
+            font-size: var(--font-large-size);
             padding-bottom: 0.5rem
         }
     }

@@ -80,9 +80,9 @@
 .paragraph, p {
   color: rgb(var(--color-white));
   font-family: var(--body-font);
-  font-size: var(--font-small-size);
+  font-size: var(--font-med-size);
   font-weight: 300;
-  line-height: var(--font-small-line-height);
+  line-height: var(--font-med-line-height);
   margin: 0.5rem 0 1rem 0;
 
   @media (--superstock) {
