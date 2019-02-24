@@ -4,8 +4,8 @@
 .root {
 }
 .title {
-  composes: responsiveTitle1 from './typography.module.css';
   text-align: left;
+  composes: responsiveTitle1 from './typography.module.css';
 }
 
 .mainImage {
@@ -88,16 +88,16 @@
 }
 
 .asideList {
-  composes: asideList from './aside.module.css';
   list-style: none;
   margin: 0.75rem 0;
   padding: 0;
+  composes: asideList from './aside.module.css';
 }
 
 .categoriesHeadline {
-  composes: responsiveTitle3 from './typography.module.css';
   /* font-family: var(--heading-font); */
   margin: 0.5rem 0 0;
+  composes: responsiveTitle3 from './typography.module.css';
 }
 
 .relatedProjects {
@@ -123,10 +123,10 @@
   margin: 0.5rem 0 0;
 }
 .viewSiteNav {
-  composes: moreNav from '../styles/global.css';
   text-align: left;
   font-size: 0.9rem;
   text-transform: none;
+  composes: moreNav from '../styles/global.css';
 
   @nest & a {
     text-transform: none;
