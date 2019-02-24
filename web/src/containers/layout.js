@@ -89,7 +89,6 @@ function LayoutContainer (props) {
       }
       if (typedEl) {
         const typed = new Typed(typedEl, typedOptions)
-        return typed
       }
 
       // var scroll = new SmoothScroll('a[href*='#']', {
@@ -116,7 +115,7 @@ function LayoutContainer (props) {
       }
       window.onscroll = () => navbarSticky()
     }
-  })
+  }, [])
 
   return (
     <StaticQuery

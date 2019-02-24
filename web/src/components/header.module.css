@@ -60,19 +60,25 @@
   font-size: 0.8rem;
   font-weight: bold;
   margin: 0;
+  /* opacity: 0; */
   transition: all 0.3s ease-in-out;
 
+  @nest .sticky & {
+    /* opacity: 1; */
+  }
   @nest & a {
     display: flex;
     align-content: center;
     padding: 0;
     color: var(--nav-link);
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     height: 100%;
     @media (hover: hover) {
       @nest &:hover {
         color: var(--nav-link-hover);
+        opacity: 0.6;
+
       }
     }
 
@@ -91,6 +97,20 @@
       @media (--superbike) {
         max-height: 34px;
         max-width: 140px;
+      }
+
+      @nest .sticky & {
+        max-height: 20px;
+        max-width: 80px;
+
+        @media (--superstock) {
+          max-height: 25px;
+          max-width: 100px;
+        }
+        @media (--superbike) {
+          max-height: 29px;
+          max-width: 120px;
+        }
       }
     }
   }
