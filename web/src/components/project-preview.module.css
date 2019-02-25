@@ -44,8 +44,8 @@
     }
 
     & p {
-      font-size: var(--font-small-size);
-      line-height: var(--font-small-line-height);
+      font-size: var(--font-med-size);
+      line-height: var(--font-med-line-height);
       text-align: left;
 
       @media (--supersport) {
