@@ -4,8 +4,26 @@
 .root {
 }
 .title {
+  color: rgb(var(--color-white));
+  font-family: var(--heading-font);
+  font-weight: 200;
+  font-size: var(--font-title2-size);
+  line-height: var(--font-title2-line-height);
+  margin: 1rem 0 2rem;
   text-align: left;
-  composes: responsiveTitle1 from './typography.module.css';
+
+  @media (--superstock) {
+    font-size: 2rem;
+    line-height: var(--font-title2-line-height);
+  }
+  @media (--supersport) {
+    font-size: 2.2rem;
+    line-height: var(--font-title2-line-height);
+  }
+  @media (--superbike) {
+    font-size: 3rem;
+    line-height: var(--font-title1-line-height);
+  }
 }
 
 .mainImage {
@@ -123,13 +141,30 @@
   margin: 0.5rem 0 0;
 }
 .viewSiteNav {
+  font-size: 0.8rem;
+  margin-top: 1rem;
   text-align: left;
-  font-size: 0.9rem;
-  text-transform: none;
-  composes: moreNav from '../styles/global.css';
+  display: block;
+  width: 100%;
 
   @nest & a {
+    background: rgb(var(--color-accent));
+    color: rgb(var(--color-white));
+    font-family: var(--body-font);
+    font-weight: normal;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 3px;
     text-transform: none;
+    transition: all 0.3s ease-in-out;
+
+    @media (hover: hover) {
+      @nest &:hover {
+        background: rgba(var(--color-main, --link0));
+        color: rgba(var(--color-white, --link0));
+      }
+    }
   }
   @nest & svg {
     width: 15px;
@@ -147,16 +182,13 @@
 
   @media (--superstock) {
     font-size: 1rem;
-    text-align: left;
   }
 
   @media (--supersport) {
       font-size: 1rem;
-      text-align: left;
   }
 
   @media (--superbike) {
     font-size: 1rem;
-    text-align: left;
   }
 }
