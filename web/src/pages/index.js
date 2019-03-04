@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs, cn } from '../lib/helpers'
 import Fade from 'react-reveal'
+import Image from 'gatsby-image'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -24,6 +25,18 @@ export const query = graphql`
         node {
           id
           mainImage {
+            asset {
+              _id
+              metadata {
+                lqip
+                dimensions {
+                  aspectRatio
+                }
+              }
+              fluid(maxHeight: 337) {
+                ...GatsbySanityImageFluid
+              }
+            }
             crop {
               _key
               _type
@@ -39,9 +52,6 @@ export const query = graphql`
               y
               height
               width
-            }
-            asset {
-              _id
             }
             alt
           }

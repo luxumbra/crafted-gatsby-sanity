@@ -134,15 +134,16 @@
 
 .projectThumb {
   width: 100%;
-  max-width: 600px;
+  max-width: 750px;
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
   border-radius: 3px;
   position: relative;
   padding-bottom: 50%;
+  background: red;
 
-  @nest & img {
+  @nest & picture {
     position: absolute;
     top: 0;
     left: 0;
@@ -152,9 +153,10 @@
     transition: transform 0.3s ease-in-out;
 
     @nest .root > a:hover & {
-      transform: scale(1.03);
+        transform: scale(1.03);
     }
   }
+
 
   @nest .projectSummary:first-of-type &,
   .projectSummary:nth-of-type(2) & {

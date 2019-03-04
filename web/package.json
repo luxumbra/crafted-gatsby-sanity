@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "crafted-in-sanity",
+  "name": "crafted-in-sanity-frontend",
   "version": "0.2.0",
   "author": "Dave Sayer <dave@crafted.im>",
   "scripts": {

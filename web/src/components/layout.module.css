@@ -163,7 +163,7 @@
 
   @nest & a {
     color: rgb(var(--color-main));
-    font-size: inherit;
+    font-size: 0.9rem;
     &:hover {
       color: var(--link-hover-color-footer);
     }

@@ -1,6 +1,6 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React, { useState, useEffect } from 'react'
-import ErrorBoundary from '../components/error-boundary'
+// import ErrorBoundary from '../components/error-boundary'
 
 import Layout from '../components/layout'
 
@@ -132,7 +132,6 @@ function LayoutContainer (props) {
           )
         }
         return (
-          <ErrorBoundary>
             <Layout
               {...props}
               showNav={showNav}
@@ -141,7 +140,6 @@ function LayoutContainer (props) {
               onHideNav={handleHideNav}
               onShowNav={handleShowNav}
             />
-          </ErrorBoundary>
         )
       }}
     />
