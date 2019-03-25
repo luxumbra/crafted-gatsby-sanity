@@ -143,7 +143,7 @@
 }
 .footer {
   background: rgb(var(--color-white));
-  box-shadow: 0 0 2rem rgba(var(--color-black), 0.6);
+  box-shadow: 0 -1rem 2rem rgba(var(--color-black), 1);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -243,13 +243,18 @@
     position: fixed;
     bottom: 160px;
     right: -170px;
-    background: rgba(var(--color-accent), 1);
+    background-color: rgba(var(--color-accent), 1);
+    background-image: url(/assets/img/45-degree-fabric-dark.png);
+    background-repeat: no-repeat;
+    background-size: 200px 70px;
+    background-blend-mode: ;
     border-radius: 2px;
     margin: 0;
     width: auto;
     height: auto;
     padding: 5px;
-    transition: all 0.4s cubic-bezier(.44, .33, .29, .84);
+    transition: all 0.4s ease;
+    /* animation: tabtinkle 2s ease 4s; */
     z-index: 0;
 
     &:hover {
@@ -270,3 +275,18 @@
     }
   }
 }
+
+/* @keyframes tabtinkle {
+  0% {
+    right: -170px;
+  }
+  25% {
+    right: -5px;
+  }
+  50% {
+    right: -5px;
+  }
+  100% {
+    right: -170px;
+  }
+} */

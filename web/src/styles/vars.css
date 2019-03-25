@@ -23,6 +23,8 @@
   --leader-font: 'Roboto', sans-serif;
   --brand-font: 'Roboto Slab', sans-serif;
 
+  --texture-linen: "/assets/img/black-linen.png";
+
   --header-height: 75px;
   --header-height-small: 60px;
   --header-height-xsmall: 50px;
