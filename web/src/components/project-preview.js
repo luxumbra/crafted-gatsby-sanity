@@ -16,12 +16,12 @@ function ProjectPreview (props) {
           <div className={cn(styles.figure, styles.projectThumb)}>
             <picture>
               {console.log(props.mainImage.asset.fluid.srcSetWebp)}
-              <source
+              {/* <source
                 srcSet={imageUrlFor(buildImageObj(props.mainImage))
                   .width(320)
                   .height(Math.floor((9 / 16) * 320))
                   .url()}
-                sizes='(max-width: 450px) 50vw, 100vw'
+                sizes='(max-width: 450px) 320px, 100vw'
               />
               <source
                 srcSet={imageUrlFor(buildImageObj(props.mainImage))
@@ -35,14 +35,14 @@ function ProjectPreview (props) {
                   .width(450)
                   .height(Math.floor((9 / 16) * 450))
                   .url()}
-                sizes='(max-width: 899px) 50vw, 100vw'
+                sizes='(max-width: 899px) 500px, 100vw'
               />
               <source
                 srcSet={imageUrlFor(buildImageObj(props.mainImage))
                   .width(600)
                   .height(Math.floor((9 / 16) * 600))
                   .url()}
-                sizes='(min-width: 900px) 50vw, 100vw'
+                sizes='(min-width: 900px) 700px, 100vw'
               />
               <img
                 src={imageUrlFor(buildImageObj(props.mainImage))
@@ -50,14 +50,22 @@ function ProjectPreview (props) {
                   .height(Math.floor((9 / 16) * 700))
                   .url()}
                 alt={props.mainImage.alt}
+              /> */}
+              {/* <Image
+                fluid={props.mainImage.asset.fluid}
+                alt={props.mainImage.alt}
+                className={styles.projectThumb}
+                srcSetWebp={props.mainImage.asset.fluid.srcSetWebp}
+              /> */}
+              <img
+                src={imageUrlFor(buildImageObj(props.mainImage))
+                  .width(600)
+                  .height(Math.floor((9 / 16) * 600))
+                  .url()}
+                alt={props.mainImage.alt}
               />
             </picture>
           </div>
-          //           <Image
-          //             fluid={props.mainImage.asset.fluid}
-          //             alt={props.mainImage.alt}
-          //             className={styles.projectThumb}
-          //           />
         )}
         <h3 className={responsiveTitle3}>
           {props.title} {props.betaProject && <span className={styles.beta}>Beta</span>}

@@ -141,7 +141,7 @@
   border-radius: 3px;
   position: relative;
   padding-bottom: 50%;
-  background: red;
+  /* background: red; */
 
   @nest & picture {
     position: absolute;
