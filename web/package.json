@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "crafted-in-sanity",
+  "name": "crafted-in-sanity-frontend",
   "version": "0.2.0",
   "author": "Dave Sayer <dave@crafted.im>",
   "scripts": {
@@ -24,8 +24,11 @@
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sentry": "^1.0.1",
+    "gatsby-plugin-sharp": "^2.0.25",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.0.23",
     "gatsby-source-sanity": "^1.0.3",
+    "gatsby-transformer-sharp": "^2.1.15",
     "npm": "^6.7.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.5.0",

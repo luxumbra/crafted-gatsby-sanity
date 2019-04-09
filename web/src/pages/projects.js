@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Image from 'gatsby-image'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
@@ -11,16 +12,41 @@ import { responsiveTitle1 } from '../components/typography.module.css'
 
 export const query = graphql`
   query ProjectsPageQuery {
-    projects: allSanityProject(
-      limit: 12
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    projects: allSanityProject(limit: 12, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
           mainImage {
             asset {
               _id
+              metadata {
+                lqip
+                dimensions {
+                  aspectRatio
+                }
+              }
+              fluid(maxWidth: 900) {
+                ...GatsbySanityImageFluid
+              }
+              fixed(width: 850) {
+                ...GatsbySanityImageFixed
+              }
+            }
+            crop {
+              _key
+              _type
+              top
+              bottom
+              left
+              right
+            }
+            hotspot {
+              _key
+              _type
+              x
+              y
+              height
+              width
             }
             alt
           }
@@ -49,7 +75,8 @@ const ProjectsPage = props => {
       </Layout>
     )
   }
-  const projectNodes = data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
+  const projectNodes =
+    data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
   return (
     <Layout>
       <SEO title='Projects' />
