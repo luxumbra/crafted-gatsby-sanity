@@ -1,6 +1,7 @@
-import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
 import { Link } from 'gatsby'
+import Image from 'gatsby-image'
+import { format, distanceInWords, differenceInDays } from 'date-fns'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
@@ -22,17 +23,18 @@ function Project (props) {
   } = props
   return (
     <article className={styles.root}>
-      {props.mainImage && mainImage.asset && (
-        <div className={styles.mainImage}>
-          <img
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(500)
-              .fit('crop')
-              .url()}
-            alt={mainImage.alt}
-          />
-        </div>
+      {mainImage && mainImage.asset && (
+        // <div className={styles.mainImage}>
+        //    <Img
+        //     fluid={imageUrlFor(buildImageObj(mainImage))
+        //       .width(1200)
+        //       .height(500)
+        //       .fit('crop')
+        //       .url()}
+        //     alt={mainImage.alt}
+        //   />
+        // </div>
+        <Image fluid={mainImage.asset.fluid} alt={mainImage.alt} className={styles.mainImage} />
       )}
       <Container>
         <div className={styles.grid}>

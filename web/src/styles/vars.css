@@ -1,4 +1,5 @@
 :root {
+  --black: 0, 0, 0;
   --color-black: 34, 34, 34;
   --color-white: 255, 255, 255;
   /* --color-accent: #f43; */
@@ -23,8 +24,10 @@
   --leader-font: 'Roboto', sans-serif;
   --brand-font: 'Roboto Slab', sans-serif;
 
+  --texture-linen: "/assets/img/black-linen.png";
+
   --header-height: 75px;
   --header-height-small: 60px;
   --header-height-xsmall: 50px;
-  --footer-height: 40px;
+  --footer-height: 70px;
 }

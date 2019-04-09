@@ -24,6 +24,22 @@ export const query = graphql`
         }
       }
       mainImage {
+        asset {
+          _id
+          metadata {
+            lqip
+            dimensions {
+              aspectRatio
+            }
+          }
+          fluid(maxWidth: 1900) {
+            ...GatsbySanityImageFluid
+          }
+          fixed {
+            ...GatsbySanityImageFixed
+          }
+          url
+        }
         crop {
           _key
           _type
@@ -39,9 +55,6 @@ export const query = graphql`
           y
           height
           width
-        }
-        asset {
-          _id
         }
         alt
       }
