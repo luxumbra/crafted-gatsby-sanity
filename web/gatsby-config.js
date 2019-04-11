@@ -15,6 +15,18 @@ module.exports = {
     //     enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)()
     //   }
     // },
+    {
+      resolve: "gatsby-plugin-rollbar",
+      options: {
+        accessToken: "d1d3f261f8aa4673bab4211b4a3c9178",
+        // For all configuration options, see https://docs.rollbar.com/v1.0.0/docs/rollbarjs-configuration-reference
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: "production"
+        }
+      }
+    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
