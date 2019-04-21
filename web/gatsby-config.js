@@ -6,18 +6,6 @@ require('dotenv').config()
 
 module.exports = {
   plugins: [
-    {
-      resolve: 'gatsby-plugin-rollbar',
-      options: {
-        accessToken: '25126cf174674cb2869bc7c28d865e40',
-        // For all configuration options, see https://docs.rollbar.com/v1.0.0/docs/rollbarjs-configuration-reference
-        captureUncaught: true,
-        captureUnhandledRejections: true,
-        payload: {
-          environment: 'production'
-        }
-      }
-    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
