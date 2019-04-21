@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@sanity/image-url": "^0.140.9",
-    "libnpm": "^2.0.1",
-    "logrocket": "^0.6.20"
+    "libnpm": "^2.0.1"
   }
 }
