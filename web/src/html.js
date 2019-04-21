@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import LogRocket from 'logrocket'
 
 export default class HTML extends React.Component {
+
+  componentWillMount () {
+    LogRocket.init('k6wwrb/crafted')
+  }
+
   render () {
     return (
       <html {...this.props.htmlAttributes}>
