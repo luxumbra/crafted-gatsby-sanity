@@ -57,6 +57,7 @@ function ProjectPreview (props) {
                 className={styles.projectThumb}
                 srcSetWebp={props.mainImage.asset.fluid.srcSetWebp}
               /> */}
+
               <img
                 src={imageUrlFor(buildImageObj(props.mainImage))
                   .width(600)
