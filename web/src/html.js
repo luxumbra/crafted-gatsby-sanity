@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // import Rollbar from 'rollbar'
-import LogRocket from 'logrocket'
+// import LogRocket from 'logrocket'
 
 export default class HTML extends React.Component {
   // constructor (props) {
@@ -30,9 +30,9 @@ export default class HTML extends React.Component {
   //   throw new Error('Crafted test error')
   // }
 
-  componentWillMount () {
-    LogRocket.init('k6wwrb/crafted')
-  }
+  // componentWillMount () {
+  //   LogRocket.init('k6wwrb/crafted')
+  // }
 
   render () {
     return (
