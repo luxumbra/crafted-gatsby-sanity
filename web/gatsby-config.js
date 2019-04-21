@@ -2,9 +2,7 @@ const {
   api: { projectId, dataset }
 } = require('../studio/sanity.json')
 
-let env = process.env.NODE_ENV || 'development'
-
-require('dotenv').config({ path: `./.env.${env}` })
+require('dotenv').config()
 
 module.exports = {
   plugins: [
