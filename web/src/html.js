@@ -1,34 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Rollbar from 'rollbar'
+// import Rollbar from 'rollbar'
 import LogRocket from 'logrocket'
 
 export default class HTML extends React.Component {
-  constructor (props) {
-    super(props)
+  // constructor (props) {
+  //   super(props)
 
-    this.state = {
-      rollbar: new Rollbar({
-        accessToken: '25126cf174674cb2869bc7c28d865e40',
-        captureUncaught: true,
-        captureUnhandledRejections: true,
-        payload: {
-          environment: 'development'
-        }
-      })
-    }
+  //   this.state = {
+  //     rollbar: new Rollbar({
+  //       accessToken: process.env.ROLLBAR_SECRET_TOKEN,
+  //       captureUncaught: true,
+  //       captureUnhandledRejections: true,
+  //       payload: {
+  //         environment: 'development'
+  //       }
+  //     })
+  //   }
 
-    this.logInfo = this.logInfo.bind(this)
-    this.throwError = this.throwError.bind(this)
-  }
+  //   this.logInfo = this.logInfo.bind(this)
+  //   this.throwError = this.throwError.bind(this)
+  // }
 
-  logInfo () {
-    this.state.rollbar.info('Crafted test log')
-  }
+  // logInfo () {
+  //   this.state.rollbar.info('Crafted test log')
+  // }
 
-  throwError () {
-    throw new Error('Crafted test error')
-  }
+  // throwError () {
+  //   throw new Error('Crafted test error')
+  // }
 
   componentWillMount () {
     LogRocket.init('k6wwrb/crafted')
