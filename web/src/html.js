@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as Sentry from '@sentry/browser'
 import LogRocket from 'logrocket'
+Sentry.init({ dsn: 'https://4623fe299a494902b98fdc047357484d@sentry.io/1391874' })
 LogRocket.init('k6wwrb/crafted')
 
 export default class HTML extends React.Component {
@@ -13,9 +14,7 @@ export default class HTML extends React.Component {
   componentDidCatch (error, errorInfo) {
     this.setState({ error })
     Sentry.withScope(scope => {
-      scope.setExtras({
-        errorInfo
-      })
+      scope.setExtras(errorInfo)
       const eventId = Sentry.captureException(error)
       this.setState({ eventId })
     })
