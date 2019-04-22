@@ -14,11 +14,22 @@ body {
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.4s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   @nest &:hover {
     color: var(--link-hover-color);
     text-decoration: none;
+  }
+
+  @nest &[href*="http"] {
+    display: inline-flex;
+    align-items: flex-start;
+
+    &:after {
+      content: "open_in_new";
+      font-family: var(--icon-font);
+      font-size: 10px;
+    }
   }
 }
 
@@ -40,6 +51,29 @@ h3 {
   font-size: 1.6rem;
   @media (--motogp) {
     font-size: 2rem
+  }
+}
+
+p {
+  @nest & a {
+    color: var(--link-color);
+    background-color: rgba(var(--black), 0.5);
+    font-weight:  400;
+    /* text-shadow: 1px 1px rgb(var(--color-black)); */
+    transition: all 0.2s ease-in;
+    border-radius: 3px;
+    padding: 0 2px;
+    display: inline-flex;
+    align-items: flex-start;
+
+    &:hover {
+      color: var(--link-color);
+      background-color: rgb(var(--color-accent));
+    }
+  }
+
+  @nest & strong {
+    font-weight: 500;
   }
 }
 svg {

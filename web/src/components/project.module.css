@@ -73,15 +73,7 @@
       font-size: 1.3rem;
     }
   }
-  @nest & a {
-    color: var(--color-accent);
 
-    @media (hover: hover) {
-      @nest &:hover {
-        color: inherit;
-      }
-    }
-  }
 }
 
 .metaContent {
@@ -153,7 +145,7 @@
     color: rgb(var(--color-white));
     font-family: var(--body-font);
     font-weight: normal;
-    display: inline-block;
+    display: inline-flex;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 3px;

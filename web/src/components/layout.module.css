@@ -275,6 +275,20 @@
       margin: 0;
       text-align: left;
       width: 100%;
+
+      & a {
+        color: rgb(var(--color-white));
+        font-weight: 400;
+        background-color: transparent;
+
+        &:after {
+          content: "";
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
     }
   }
 }

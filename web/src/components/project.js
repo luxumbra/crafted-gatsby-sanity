@@ -54,7 +54,7 @@ function Project (props) {
               </div>
             )} */}
             <div className={styles.viewSiteNav}>
-              <a href={projectURL} target='_blank' rel='noopener'>Visit the website <i data-feather='external-link'/></a>
+              <a href={projectURL} rel='noopener'>Visit the website</a>
             </div>
             {members && <RoleList items={members} title='Project team' />}
             {categories && (
