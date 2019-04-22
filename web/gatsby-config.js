@@ -25,7 +25,7 @@ module.exports = {
         dataset,
         // To enable preview of drafts, copy .env-example into .env,
         // and add a token with read permissions
-        token: process.env.SANITY_TOKEN,
+        token: 'skrA5UVGeTdPSO53kafzAHzLPDXMjOoG3p5Uuef5ilv8LsncVZ2iDPFtBosKVnznVZixAlIxwcLPAm7NXId3kY5aUHDdjp8ixurK5KZFLwlyxz0SGWiEjyAoyyiqqWsTB29D5j5Kaf9eQbzYEkbRgm13QK2FMS5WKs3cQleyOtuZ2FTRXzPl',
         watchMode: true,
         overlayDrafts: true
       }
