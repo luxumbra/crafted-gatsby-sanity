@@ -1,33 +1,60 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import * from '@sentry/browser'
 
 export default class HTML extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = { error: null }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    this.setState({ error })
+    Sentry.configureScope((scope) => {
+      Object.keys(errorInfo).forEach(key => {
+        scope.setExtra(key, errorInfo[key])
+      })
+    })
+    Sentry.captureException(error)
+  }
+
   render () {
-    return (
-      <html {...this.props.htmlAttributes}>
-        <head>
-          <meta charSet='utf-8' />
-          <meta httpEquiv='x-ua-compatible' content='ie=edge' />
-          <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
-          <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-          <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-          <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-          <link rel='manifest' href='/site.webmanifest' />
-          <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#cf142b' />
-          <meta name='msapplication-TileColor' content='#181717' />
-          <meta name='theme-color' content='#181717' />
-          {this.props.headComponents}
-        </head>
-        <body {...this.props.bodyAttributes}>
-          {this.props.preBodyComponents}
-          <noscript key='noscript' id='gatsby-noscript'>
-            This app works best with JavaScript enabled.
-          </noscript>
-          <div key={`body`} id='___gatsby' dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          {this.props.postBodyComponents}
-        </body>
-      </html>
-    )
+    if (this.state.error) {
+      // render fallback UI
+      return (
+        <>
+        <h1>Ooops! There's a bit of a problem.</h1>
+        <p>We use full error tracking and monitoring, so will be notified of this problem and will get it fixed ASAP.</p>
+        </>
+      )
+    } else {
+      // when there's not an error, render children untouched
+      return (
+        <html {...this.props.htmlAttributes}>
+          <head>
+            <meta charSet='utf-8' />
+            <meta httpEquiv='x-ua-compatible' content='ie=edge' />
+            <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+            <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+            <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+            <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+            <link rel='manifest' href='/site.webmanifest' />
+            <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#cf142b' />
+            <meta name='msapplication-TileColor' content='#181717' />
+            <meta name='theme-color' content='#181717' />
+            {this.props.headComponents}
+          </head>
+          <body {...this.props.bodyAttributes}>
+            {this.props.preBodyComponents}
+            <noscript key='noscript' id='gatsby-noscript'>
+              This app works best with JavaScript enabled.
+            </noscript>
+            <div key={`body`} id='___gatsby' dangerouslySetInnerHTML={{ __html: this.props.body }} />
+            {this.props.postBodyComponents}
+          </body>
+        </html>
+      )
+    }
   }
 }
 
