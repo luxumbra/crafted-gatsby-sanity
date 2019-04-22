@@ -36,33 +36,33 @@ function LayoutContainer (props) {
   }
 
   useEffect(() => {
-    const srRevealSlooooow = {
-      delay: 1500,
-      duration: 1000,
-      reset: true,
-      mobile: true
-    }
-    const srRevealSlooow = {
-      delay: 700,
-      duration: 700,
-      reset: true,
-      mobile: true
-    }
-    const srRevealSlow = {
-      delay: 600,
-      duration: 700,
-      reset: true,
-      mobile: true
-    }
-    const srRevealFast = {
-      delay: 400,
-      duration: 400,
-      reset: true,
-      mobile: true
-    }
-    const srRevealOnce = {
-      reset: false
-    }
+    // const srRevealSlooooow = {
+    //   delay: 1500,
+    //   duration: 1000,
+    //   reset: true,
+    //   mobile: true
+    // }
+    // const srRevealSlooow = {
+    //   delay: 700,
+    //   duration: 700,
+    //   reset: true,
+    //   mobile: true
+    // }
+    // const srRevealSlow = {
+    //   delay: 600,
+    //   duration: 700,
+    //   reset: true,
+    //   mobile: true
+    // }
+    // const srRevealFast = {
+    //   delay: 400,
+    //   duration: 400,
+    //   reset: true,
+    //   mobile: true
+    // }
+    // const srRevealOnce = {
+    //   reset: false
+    // }
 
     if (typeof window !== `undefined`) {
       // we need to check if `window` is defined when building the site so not to break the build
@@ -132,14 +132,14 @@ function LayoutContainer (props) {
           )
         }
         return (
-            <Layout
-              {...props}
-              showNav={showNav}
-              companyInfo={data.companyInfo}
-              siteTitle={data.site.title}
-              onHideNav={handleHideNav}
-              onShowNav={handleShowNav}
-            />
+          <Layout
+            {...props}
+            showNav={showNav}
+            companyInfo={data.companyInfo}
+            siteTitle={data.site.title}
+            onHideNav={handleHideNav}
+            onShowNav={handleShowNav}
+          />
         )
       }}
     />
