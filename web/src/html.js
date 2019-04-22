@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import * as Sentry from '@sentry/browser'
+import LogRocket from 'logrocket'
+LogRocket.init('k6wwrb/crafted')
 
 export default class HTML extends React.Component {
   constructor (props) {
@@ -11,7 +13,9 @@ export default class HTML extends React.Component {
   componentDidCatch (error, errorInfo) {
     this.setState({ error })
     Sentry.withScope(scope => {
-      scope.setExtras(errorInfo)
+      scope.setExtras({
+        errorInfo
+      })
       const eventId = Sentry.captureException(error)
       this.setState({ eventId })
     })
@@ -23,8 +27,17 @@ export default class HTML extends React.Component {
       return (
         <>
           <h1>Ooops! There's a bit of a problem.</h1>
-          <p>We use full error tracking and monitoring at Crafted, so will be notified of this problem and will get it fixed ASAP.</p>
-          <p>If you'd like, you can <a onClick={() => Sentry.showReportDialog({ eventId: this.state.eventId })}>report feedback</a> to us.</p>
+          <p>
+            We use full error tracking and monitoring at Crafted, so will be notified of this
+            problem and will get it fixed ASAP.
+          </p>
+          <p>
+            If you'd like, you can{' '}
+            <a onClick={() => Sentry.showReportDialog({ eventId: this.state.eventId })}>
+              report feedback
+            </a>{' '}
+            to us.
+          </p>
         </>
       )
     } else {
@@ -42,6 +55,8 @@ export default class HTML extends React.Component {
             <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#cf142b' />
             <meta name='msapplication-TileColor' content='#181717' />
             <meta name='theme-color' content='#181717' />
+            {/* <script src='https://cdn.logrocket.io/LogRocket.min.js' crossOrigin='anonymous' />
+            <script>window.LogRocket && window.LogRocket.init('k6wwrb/crafted');</script> */}
             {this.props.headComponents}
           </head>
           <body {...this.props.bodyAttributes}>
@@ -49,7 +64,11 @@ export default class HTML extends React.Component {
             <noscript key='noscript' id='gatsby-noscript'>
               This app works best with JavaScript enabled.
             </noscript>
-            <div key={`body`} id='___gatsby' dangerouslySetInnerHTML={{ __html: this.props.body }} />
+            <div
+              key={`body`}
+              id='___gatsby'
+              dangerouslySetInnerHTML={{ __html: this.props.body }}
+            />
             {this.props.postBodyComponents}
           </body>
         </html>
