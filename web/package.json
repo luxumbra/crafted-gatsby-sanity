@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-named-capturing-groups-regex": "^7.3.0",
+    "@sentry/cli": "^1.41.1",
     "babel-jest": "^24.1.0",
     "babel-preset-gatsby": "^0.1.7",
     "eslint": "^5.11.1",

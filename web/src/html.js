@@ -1,21 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import * from '@sentry/browser'
+import * as Sentry from '@sentry/browser'
 
 export default class HTML extends React.Component {
   constructor (props) {
-    super(props);
-    this.state = { error: null }
+    super(props)
+    this.state = { error: null, eventId: null }
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch (error, errorInfo) {
     this.setState({ error })
-    Sentry.configureScope((scope) => {
-      Object.keys(errorInfo).forEach(key => {
-        scope.setExtra(key, errorInfo[key])
-      })
+    Sentry.withScope(scope => {
+      scope.setExtras(errorInfo)
+      const eventId = Sentry.captureException(error)
+      this.setState({ eventId })
     })
-    Sentry.captureException(error)
   }
 
   render () {
@@ -23,8 +22,9 @@ export default class HTML extends React.Component {
       // render fallback UI
       return (
         <>
-        <h1>Ooops! There's a bit of a problem.</h1>
-        <p>We use full error tracking and monitoring, so will be notified of this problem and will get it fixed ASAP.</p>
+          <h1>Ooops! There's a bit of a problem.</h1>
+          <p>We use full error tracking and monitoring at Crafted, so will be notified of this problem and will get it fixed ASAP.</p>
+          <p>If you'd like, you can <a onClick={() => Sentry.showReportDialog({ eventId: this.state.eventId })}>report feedback</a> to us.</p>
         </>
       )
     } else {

@@ -8,15 +8,6 @@ require('dotenv').config({
 
 module.exports = {
   plugins: [
-    {
-      resolve: 'gatsby-plugin-sentry',
-      options: {
-        dsn: process.env.SENTRY_DSN_URL,
-        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-        environment: process.env.NODE_ENV,
-        enabled: (() => ['production', 'development', 'stage'].indexOf(process.env.NODE_ENV) !== -1)()
-      }
-    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
