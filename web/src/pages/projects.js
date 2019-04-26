@@ -1,13 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
+//
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import LogRocketHelmet from '../components/log-rocket-helmet'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
-
+//
 import { responsiveTitle1 } from '../components/typography.module.css'
 
 export const query = graphql`
@@ -80,6 +82,7 @@ const ProjectsPage = props => {
   return (
     <Layout>
       <SEO title='Projects' />
+      <LogRocketHelmet />
       <Container page='projects'>
         <h1 className={responsiveTitle1}>Projects</h1>
         {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}

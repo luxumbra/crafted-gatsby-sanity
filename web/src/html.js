@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import * as Sentry from '@sentry/browser'
-import LogRocket from 'logrocket'
 Sentry.init({ dsn: 'https://4623fe299a494902b98fdc047357484d@sentry.io/1391874' })
-LogRocket.init('k6wwrb/crafted')
 
 export default class HTML extends React.Component {
   constructor (props) {
@@ -54,8 +52,6 @@ export default class HTML extends React.Component {
             <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#cf142b' />
             <meta name='msapplication-TileColor' content='#181717' />
             <meta name='theme-color' content='#181717' />
-            {/* <script src='https://cdn.logrocket.io/LogRocket.min.js' crossOrigin='anonymous' />
-            <script>window.LogRocket && window.LogRocket.init('k6wwrb/crafted');</script> */}
             {this.props.headComponents}
           </head>
           <body {...this.props.bodyAttributes}>
@@ -63,6 +59,8 @@ export default class HTML extends React.Component {
             <noscript key='noscript' id='gatsby-noscript'>
               This app works best with JavaScript enabled.
             </noscript>
+            {console.log(this.props)}
+            }
             <div
               key={`body`}
               id='___gatsby'

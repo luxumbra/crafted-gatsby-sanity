@@ -1,13 +1,12 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React, { useState, useEffect } from 'react'
 // import ErrorBoundary from '../components/error-boundary'
-import LogRocket from 'logrocket'
-
+//
 import Layout from '../components/layout'
-
+//
 import feather from 'feather-icons'
 import Typed from 'typed.js'
-
+//
 import '../styles/theme.css'
 import styles from '../components/header.module.css'
 
@@ -89,7 +88,7 @@ function LayoutContainer (props) {
         loop: false
       }
       if (typedEl) {
-        const typedy = new Typed(typedEl, typedOptions)
+        const typed = new Typed(typedEl, typedOptions)
       }
 
       // var scroll = new SmoothScroll('a[href*='#']', {
