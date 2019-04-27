@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs, cn } from '../lib/helpers'
 import Fade from 'react-reveal'
 import Image from 'gatsby-image'
+//
+import LogRocketHelmet from '../components/log-rocket-helmet'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -134,6 +136,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
+      <LogRocketHelmet />
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container page='home'>
         <section>

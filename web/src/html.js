@@ -60,7 +60,6 @@ export default class HTML extends React.Component {
               This app works best with JavaScript enabled.
             </noscript>
             {console.log(this.props)}
-            }
             <div
               key={`body`}
               id='___gatsby'

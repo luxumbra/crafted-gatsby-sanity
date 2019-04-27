@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+//
+import LogRocketHelmet from '../components/log-rocket-helmet'
 import BlockContent from '../components/block-content'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -58,6 +60,7 @@ const AboutPage = props => {
 
   return (
     <Layout>
+      <LogRocketHelmet />
       <SEO title={page.title} />
       <Container page='about'>
         <h1 className={responsiveTitle1}>{page.title}</h1>

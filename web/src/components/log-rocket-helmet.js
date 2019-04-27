@@ -9,7 +9,7 @@ function LogRocketHelmet ({ project }) {
         <script src='https://cdn.logrocket.io/LogRocket.min.js' crossOrigin='anonymous' />
         <script>{`
           console.log('Hello')
-          window.LogRocket && window.LogRocket.init('k6wwrb/crafted')
+          window.LogRocket && window.LogRocket.init('k6wwrb/crafted-in-sanity')
         `}
         </script>
       </Helmet>

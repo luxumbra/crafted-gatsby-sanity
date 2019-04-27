@@ -1,12 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+//
+import LogRocketHelmet from '../components/log-rocket-helmet'
 import { mapEdgesToNodes } from '../lib/helpers'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-
+//
 import aside from '../components/aside.module.css'
 import categories from '../components/blog-categories.module.css'
 import { responsiveTitle1 } from '../components/typography.module.css'
@@ -50,6 +52,7 @@ const BlogPage = props => {
 
   return (
     <Layout>
+      <LogRocketHelmet />
       <SEO title='Blog' />
       <h1 className={responsiveTitle1}>Blog</h1>
       <Container page='blog'>

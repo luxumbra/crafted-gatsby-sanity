@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+//
+import LogRocketHelmet from '../components/log-rocket-helmet'
 import BlockContent from '../components/block-content'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-
+//
 import { responsiveTitle1 } from '../components/typography.module.css'
 
 export const query = graphql`
@@ -38,6 +40,7 @@ const ContactPage = props => {
 
   return (
     <Layout>
+      <LogRocketHelmet />
       <SEO title={page.title} />
       <Container>
         <h1 className={responsiveTitle1}>{page.title}</h1>
