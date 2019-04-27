@@ -21,7 +21,5 @@
     "lerna": "^3.9.0",
     "rimraf": "^2.6.3"
   },
-  "dependencies": {
-    "@sanity/image-url": "^0.140.9"
-  }
+  "dependencies": {}
 }

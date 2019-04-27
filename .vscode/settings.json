@@ -1,5 +1,7 @@
 {
     "prettier.singleQuote": true,
     "prettier.semi": false,
-    "prettier.stylelintIntegration": true
+    "prettier.stylelintIntegration": true,
+    "prettier.eslintIntegration": true,
+    "prettier.tslintIntegration": true
 }
