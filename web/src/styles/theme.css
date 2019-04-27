@@ -54,26 +54,29 @@ h3 {
   }
 }
 
-p {
-  @nest & a {
-    color: var(--link-color);
-    background-color: rgba(var(--black), 0.5);
-    font-weight:  400;
-    /* text-shadow: 1px 1px rgb(var(--color-black)); */
-    transition: all 0.2s ease-in;
-    border-radius: 3px;
-    padding: 0 2px;
-    display: inline-flex;
-    align-items: flex-start;
-
-    &:hover {
+[class*="container-module"] {
+  @nest & p,
+  & li {
+    & a {
       color: var(--link-color);
-      background-color: rgb(var(--color-accent));
-    }
-  }
+      background-color: rgba(var(--black), 0.5);
+      font-weight:  400;
+      /* text-shadow: 1px 1px rgb(var(--color-black)); */
+      transition: all 0.2s ease-in;
+      border-radius: 3px;
+      padding: 0 2px;
+      display: inline-flex;
+      align-items: flex-start;
 
-  @nest & strong {
-    font-weight: 500;
+      &:hover {
+        color: var(--link-color);
+        background-color: rgb(var(--color-accent));
+      }
+    }
+
+    & strong {
+      font-weight: 500;
+    }
   }
 }
 svg {

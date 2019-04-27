@@ -3,6 +3,10 @@
   "name": "crafted-in-sanity-frontend",
   "version": "0.2.0",
   "author": "Dave Sayer <dave@crafted.im>",
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ],
   "scripts": {
     "build": "gatsby build",
     "deploy": "npm run now-deploy",

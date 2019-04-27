@@ -1,7 +1,7 @@
 import React from 'react'
 import { cn } from '../lib/helpers'
 import Header from './header'
-
+//
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
@@ -55,7 +55,7 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
       <div className={styles.siteInfo}>
         <p>
           © {new Date().getFullYear()}, Crafted Web Services Ltd (Crafted) Isle of Man Registered Company:
-          132788C
+          132788C. VAT registration no: GB 005 3026 34
         </p>
         <div className={styles.builtWith}>
           <p>

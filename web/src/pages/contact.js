@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+//
 import BlockContent from '../components/block-content'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-
+import SimplePageLayout from '../components/simple-page-layout'
+//
 import { responsiveTitle1 } from '../components/typography.module.css'
 
 export const query = graphql`
@@ -39,9 +41,11 @@ const ContactPage = props => {
   return (
     <Layout>
       <SEO title={page.title} />
-      <Container>
+      <Container page='contact'>
         <h1 className={responsiveTitle1}>{page.title}</h1>
-        <BlockContent blocks={page._rawBody || []} />
+        <SimplePageLayout>
+          <BlockContent blocks={page._rawBody || []} />
+        </SimplePageLayout>
       </Container>
     </Layout>
   )

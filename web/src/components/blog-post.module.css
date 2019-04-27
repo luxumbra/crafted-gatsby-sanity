@@ -57,8 +57,6 @@
     }
   }
   @nest & a {
-    color: rgb(var(--color-accent));
-
     @media (hover: hover) {
       @nest &:hover {
         color: inherit;

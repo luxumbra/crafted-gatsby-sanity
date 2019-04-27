@@ -1,0 +1,49 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+
+.root {
+    @nest & p:first-of-type {
+    font-size: 1rem;
+
+    @media (--superstock) {
+      font-size: 1.1rem;
+    }
+    @media (--superbike) {
+      font-size: 1.3rem;
+    }
+  }
+}
+.title {
+  color: rgb(var(--color-white));
+  font-family: var(--heading-font);
+  font-weight: 200;
+  font-size: var(--font-title2-size);
+  line-height: var(--font-title2-line-height);
+  margin: 1rem 0 2rem;
+  text-align: left;
+
+  @media (--superstock) {
+    font-size: 2rem;
+    line-height: var(--font-title2-line-height);
+  }
+  @media (--supersport) {
+    font-size: 2.2rem;
+    line-height: var(--font-title2-line-height);
+  }
+  @media (--superbike) {
+    font-size: 3rem;
+    line-height: var(--font-title1-line-height);
+  }
+}
+
+.metaContent {
+  grid-column-start: 2;
+  grid-column-end: 12;
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+
+  @media (--supersport) {
+    grid-column-start: 9;
+    grid-column-end: 12;
+  }
+}
