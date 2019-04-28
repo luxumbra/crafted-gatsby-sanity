@@ -7,6 +7,9 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import SimplePageLayout from '../components/simple-page-layout'
+import FlexLayout from '../components/layout-elements/flex-layout'
+import CompanyContact from '../components/company-contact'
+import ContactForm from '../components/contact-form'
 //
 import { responsiveTitle1 } from '../components/typography.module.css'
 
@@ -43,8 +46,12 @@ const ContactPage = props => {
       <SEO title={page.title} />
       <Container page='contact'>
         <h1 className={responsiveTitle1}>{page.title}</h1>
-        <SimplePageLayout>
+        <SimplePageLayout layout='two'>
           <BlockContent blocks={page._rawBody || []} />
+          <FlexLayout>
+            <CompanyContact />
+            <ContactForm />
+          </FlexLayout>
         </SimplePageLayout>
       </Container>
     </Layout>

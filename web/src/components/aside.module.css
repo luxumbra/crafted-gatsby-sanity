@@ -3,34 +3,36 @@
 
 .root,
 aside {
-    color: white;
-    padding-top: 0.5rem;
-    @nest & h3 {
-        font-weight: lighter;
-        margin: 0 0 1rem;
-    }
+  color: white;
+  padding-top: 0.5rem;
+  @nest & h3 {
+    font-weight: lighter;
+    margin: 0 0 1rem;
+  }
 
-    @media (--motogp) {
-        padding-top: 1.5rem;
-    }
+  @media (--motogp) {
+    padding-top: 1.5rem;
+  }
 }
 
 .asideList {
-    composes: plainList from '../styles/global.css';
-    width: 100%;
-    @nest & li {
-        padding-bottom: 0;
+  composes: plainList from '../styles/global.css';
+  width: 100%;
+  @nest & li {
+    padding-bottom: 0;
+    font-size: 1.3rem;
+    & a {
+      display: block;
+      background: rgba(var(--color-black), 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      transition: background 0.4s ease-in-out, color 0.3s ease-in-out, border-radius 0.3s ease;
 
-        & a {
-            display: block;
-            padding: .5rem 1rem;
-            border-radius: 2px 3px 8px 2px;
-            transition: background 0.4s ease-in-out, color 0.3s ease-in-out;
-
-            @nest &:hover {
-                color: rgb(var(--color-white));
-                background: rgba(var(--color-accent, --link0));
-            }
-        }
+      @nest &:hover {
+        color: rgb(var(--color-white));
+        background: rgba(var(--color-accent, --link0));
+        border-radius: 2px 3px 8px 2px;
+      }
     }
+  }
 }

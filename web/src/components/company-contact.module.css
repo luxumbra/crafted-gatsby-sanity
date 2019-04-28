@@ -1,0 +1,18 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+
+.root {
+  composes: column from './layout-elements/flex-layout.module.css';
+  text-align: left;
+  width: 50%;
+  flex: 0 0 50%;
+
+  @nest & ul {
+    list-style: none;
+    padding-left: 0;
+
+    @nest & li {
+      padding: 1rem 0;
+    }
+  }
+}

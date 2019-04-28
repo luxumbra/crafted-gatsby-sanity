@@ -2,14 +2,16 @@
 @import '../styles/vars.css';
 
 .root {
-    @nest & p:first-of-type {
+  text-align: center;
+  @nest & p:first-of-type {
     font-size: 1rem;
+    text-align: center;
 
     @media (--superstock) {
       font-size: 1.1rem;
     }
     @media (--superbike) {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
     }
   }
 }

@@ -1,0 +1,9 @@
+.root {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.column {
+}

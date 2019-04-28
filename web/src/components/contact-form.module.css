@@ -1,0 +1,27 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+
+.root {
+  composes: column from './layout-elements/flex-layout.module.css';
+  padding: 1rem 0 0;
+  text-align: left;
+  width: 50%;
+  flex: 0 0 50%;
+
+  & p:first-of-type {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  label {
+    display: flex;
+    justify-items: stretch;
+  }
+
+  .label {
+    padding: 5px 10px;
+  }
+
+  .control {
+  }
+}

@@ -2,14 +2,11 @@
   --black: 0, 0, 0;
   --color-black: 34, 34, 34;
   --color-white: 255, 255, 255;
-  /* --color-accent: #f43; */
-
-  --color-main: 65,65,65;
+  --color-main: 65, 65, 65;
   --color-main-dark: 4, 4, 4;
   --color-accent: 207, 20, 43;
   --linkO: 0.9;
   --hoverO: 0.6;
-
   --copy-color-main: rgb(var(--color-white));
   --link-color: rgba(var(--color-white), var(--linkO));
   --link-hover-color: rgba(var(--color-accent), var(--linkO));
@@ -18,15 +15,12 @@
   --link-hover-color-footer: rgb(var(--color-accent));
   --nav-link: var(--link-color);
   --nav-link-hover: var(--link-hover-color);
-
   --body-font: 'Ubuntu', sans-serif;
   --heading-font: 'Assistant', sans-serif;
   --leader-font: 'Roboto', sans-serif;
   --brand-font: 'Roboto Slab', sans-serif;
   --icon-font: 'Material Icons';
-
-  --texture-linen: "/assets/img/black-linen.png";
-
+  --texture-linen: '/assets/img/black-linen.png';
   --header-height: 75px;
   --header-height-small: 60px;
   --header-height-xsmall: 50px;
