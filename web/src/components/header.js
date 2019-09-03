@@ -6,11 +6,12 @@ import { cn } from '../lib/helpers'
 import styles from './header.module.css'
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-
   <header className={cn(styles.root, styles.fixed)}>
     <div className={styles.wrapper}>
       <span className={styles.branding}>
-        <Link to='/'><img src='/assets/img/crafted-text-logo.png' alt='CrafteD logo' /></Link>
+        <Link to='/'>
+          <img src='/assets/img/crafted-text-logo.png' alt='CrafteD logo' />
+        </Link>
       </span>
 
       <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
@@ -25,9 +26,9 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
           <li>
             <Link to='/projects/'>Projects</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to='/blog/'>Blog</Link>
-          </li>
+          </li> */}
           <li>
             <Link to='/contact/'>Contact</Link>
           </li>
