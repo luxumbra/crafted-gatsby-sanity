@@ -1,7 +1,8 @@
 import React from 'react'
+//
 import { cn } from '../lib/helpers'
 import Header from './header'
-
+//
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
@@ -27,9 +28,9 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
             </a>
           </li>
           <li>
-            <a href='tel:+44 7507 481812' className={styles.navLink}>
+            <a href='tel:+443333034337' className={styles.navLink}>
               <i data-feather='phone'>Phone</i>{' '}
-              <span className='d-none d-lg-inline'>+44 7507 481812</span>
+              <span className='d-none d-lg-inline'>+44 (0)33 3303 4337</span>
             </a>
           </li>
           <li>
@@ -54,14 +55,14 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
       </div>
       <div className={styles.siteInfo}>
         <p>
-          © {new Date().getFullYear()}, Crafted Web Services Ltd (Crafted) Isle of Man Registered Company:
-          132788C
+          © {new Date().getFullYear()}, Crafted Web Services Ltd (Crafted) Isle of Man Registered
+          Company: 132788C | VAT registration number GB 005 3026 34
         </p>
         <div className={styles.builtWith}>
           <p>
-            Crafted in <a href='https://www.sanity.io'>Sanity</a> &amp;
+            Crafted with <a href='https://www.gatsbyjs.org'>Gatsby</a> &amp;
             {` `}
-            <a href='https://www.gatsbyjs.org'>Gatsby</a>
+            <a href='https://www.sanity.io'>Sanity</a>
           </p>
         </div>
       </div>
