@@ -133,8 +133,8 @@
 }
 
 .projectThumb {
-  width: 100%;
-  max-width: 750px;
+  width: 750px;
+  max-width: 100%;
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
@@ -151,6 +151,11 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+
+    @nest & img {
+      max-width: 100%;
+      height: auto;
+    }
 
     @nest .root > a:hover & {
         transform: scale(1.03);
