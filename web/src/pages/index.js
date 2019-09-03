@@ -119,9 +119,9 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
-    : []
+  // const postNodes = (data || {}).posts
+  //   ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
+  //   : []
   const projectNodes = (data || {}).projects
     ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
     : []
@@ -148,7 +148,7 @@ const IndexPage = props => {
             />
           )}
         </section>
-        <section id='latest-posts'>
+        {/* <section id='latest-posts'>
           {postNodes && (
             <BlogPostPreviewGrid
               title='Latest blog posts'
@@ -156,7 +156,7 @@ const IndexPage = props => {
               browseMoreHref='/blog/'
             />
           )}
-        </section>
+        </section> */}
       </Container>
     </Layout>
   )

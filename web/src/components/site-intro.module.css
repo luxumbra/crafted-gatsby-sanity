@@ -42,11 +42,17 @@
 
 blockquote {
   color: rgb(var(--color-white));
+  display: block;
   font-family: 'Roboto Slab', sans-serif;
   font-display: swap;
   font-size: 1rem;
   font-weight: 200;
-  margin: 1rem 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 100%;
+  flex: 0 1 100%;
+  flex-grow: 1;
+  padding: 0;
   text-align: justify-all;
 
   @nest & footer {
@@ -61,16 +67,19 @@ blockquote {
       font-size: 0.9rem;
     }
   }
-  /* @media (--supersport) {
-    font-size: 1.4rem;
-    margin: 2rem 1rem;
 
-    @nest & footer {
-      font-size: 1.2rem;
-    }
-  } */
   @media (--superbike) {
     font-size: 1.2rem;
+    max-width: 50%;
+    flex: 0 1 auto;
+    padding: 0 1rem;
+
+    @nest &:first-child {
+      padding-left: 0;
+    }
+    @nest &:last-child {
+      padding-right: 0;
+    }
 
     @nest & footer {
       font-size: 1rem;
@@ -87,6 +96,16 @@ blockquote {
 
 .precis {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  @media (--supersport) {
+    flex-direction: column;
+  }
+  @media (--superbike) {
+    flex-direction: row;
+  }
 }
 
 .intro h2 {
