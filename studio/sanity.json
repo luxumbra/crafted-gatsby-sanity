@@ -2,7 +2,14 @@
   "root": true,
   "api": {
     "projectId": "mdzm7k99",
-    "dataset": "development"
+    "dataset": "production"
+  },
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      }
+    }
   },
   "project": {
     "name": "Crafted Managed Sanity (CMS)"
