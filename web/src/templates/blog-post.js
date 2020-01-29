@@ -8,7 +8,7 @@ import Layout from '../containers/layout'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(_id: { eq: $id }) {
+    post: sanityPost(id: { eq: $id }) {
       _id
       publishedAt
       categories {

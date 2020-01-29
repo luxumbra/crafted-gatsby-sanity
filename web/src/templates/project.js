@@ -8,7 +8,7 @@ import Layout from '../containers/layout'
 
 export const query = graphql`
   query ProjectTemplateQuery($id: String!) {
-    project: sanityProject(_id: { eq: $id }) {
+    project: sanityProject(id: { eq: $id }) {
       _id
       publishedAt
       projectURL

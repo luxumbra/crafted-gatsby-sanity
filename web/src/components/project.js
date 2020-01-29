@@ -13,7 +13,6 @@ import styles from './project.module.css'
 function Project(props) {
   const {
     _rawBody,
-    id,
     title,
     categories,
     mainImage,
