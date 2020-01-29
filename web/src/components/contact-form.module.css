@@ -1,0 +1,41 @@
+@import '../styles/vars.css';
+@import '../styles/media-queries.css';
+@import '../components/typography.module.css';
+
+.root {
+}
+
+.contact-form {
+  font-size: var(--font-large-size);
+  text-align: center;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto 1.2rem;
+    width: 66%;
+
+    &:last-child {
+      /* justify-content: flex-end; */
+    }
+  }
+  label {
+    border: 2px solid transparent;
+    margin: 0 auto;
+    padding: 5px 8px 3px;
+    width: 66%;
+  }
+  .input {
+    composes: form-control contact-control from '../styles/global.css';
+  }
+
+  /* @nest & textarea {
+    composes: form-control contact-control from "../styles/global.css";
+  } */
+
+  button {
+    /* composes: btn from "../styles/global.css"; */
+    width: 33%;
+  }
+}

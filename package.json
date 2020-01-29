@@ -18,11 +18,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@sanity/cli": "^0.142.2",
-    "lerna": "^3.9.0",
-    "rimraf": "^2.6.3"
+    "@sanity/cli": "^0.147.8",
+    "lerna": "^3.20.2",
+    "rimraf": "^3.0.0"
   },
   "dependencies": {
-    "@sanity/image-url": "^0.140.12"
+    "@sanity/image-url": "^0.140.17"
   }
 }

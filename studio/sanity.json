@@ -5,7 +5,8 @@
     "dataset": "development"
   },
   "project": {
-    "name": "Crafted Managed Sanity (CMS)"
+    "name": "Crafted Managed Sanity (CMS)",
+    "basePath": "/studio"
   },
   "plugins": [
     "@sanity/base",
