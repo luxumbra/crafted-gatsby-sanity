@@ -8,8 +8,8 @@ import Layout from '../containers/layout'
 
 export const query = graphql`
   query ProjectTemplateQuery($id: String!) {
-    project: sanityProject(id: { eq: $id }) {
-      id
+    project: sanityProject(_id: { eq: $id }) {
+      _id
       publishedAt
       projectURL
       categories {
@@ -100,7 +100,7 @@ const ProjectTemplate = props => {
   const project = data && data.project
   return (
     <Layout>
-      {errors && <SEO title='GraphQL Error' />}
+      {errors && <SEO title="GraphQL Error" />}
       {project && <SEO title={project.title || 'Untitled'} />}
 
       {errors && (
@@ -109,7 +109,7 @@ const ProjectTemplate = props => {
         </Container>
       )}
       {project && (
-        <Container page='project'>
+        <Container page="project">
           <Project {...project} />
         </Container>
       )}

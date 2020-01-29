@@ -8,8 +8,8 @@ import Layout from '../containers/layout'
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: { eq: $id }) {
-      id
+    post: sanityPost(_id: { eq: $id }) {
+      _id
       publishedAt
       categories {
         _id
@@ -79,7 +79,7 @@ const BlogPostTemplate = props => {
   const post = data && data.post
   return (
     <Layout>
-      {errors && <SEO title='GraphQL Error' />}
+      {errors && <SEO title="GraphQL Error" />}
       {post && <SEO title={post.title || 'Untitled'} />}
 
       {errors && (
@@ -87,7 +87,7 @@ const BlogPostTemplate = props => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-      <Container page='post'>{post && <BlogPost {...post} />}</Container>
+      <Container page="post">{post && <BlogPost {...post} />}</Container>
     </Layout>
   )
 }
