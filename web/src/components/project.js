@@ -10,9 +10,10 @@ import RoleList from './role-list'
 
 import styles from './project.module.css'
 
-function Project (props) {
+function Project(props) {
   const {
     _rawBody,
+    id,
     title,
     categories,
     mainImage,
@@ -54,9 +55,11 @@ function Project (props) {
               </div>
             )} */}
             <div className={styles.viewSiteNav}>
-              <a href={projectURL} rel='noopener'>Visit the website</a>
+              <a href={projectURL} rel="noopener">
+                Visit the website
+              </a>
             </div>
-            {members && <RoleList items={members} title='Project team' />}
+            {members && <RoleList items={members} title="Project team" />}
             {categories && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
