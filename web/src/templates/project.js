@@ -7,8 +7,9 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 export const query = graphql`
-  query ProjectTemplateQuery($id: String!) {
-    project: sanityProject(_id: { eq: $id }) {
+  query ProjectTemplateQuery($id: String) {
+    project: sanityProject(id: { eq: $id }) {
+      id
       _id
       publishedAt
       projectURL
@@ -18,7 +19,6 @@ export const query = graphql`
       }
       relatedProjects {
         title
-        _id
         slug {
           current
         }
@@ -94,7 +94,6 @@ export const query = graphql`
     }
   }
 `
-
 const ProjectTemplate = props => {
   const { data, errors } = props
   const project = data && data.project
