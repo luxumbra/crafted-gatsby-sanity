@@ -25,21 +25,27 @@
     overflow: hidden;
 
     & h3 {
-      color: var(--link-accent-color);
+      color: var(--link-color);
+      background-color: rgba(var(--black), 0.5);
       font-family: 'Ubuntu', sans-serif;
       font-weight: normal;
       font-size: 1.2rem;
-      transition: color 0.3s ease-in-out;
-
+      border-radius: 3px;
+      padding: 3px 2px;
+      /* display: inline-flex; */
+      /* align-items: flex-start; */
+      transition: all 0.2s ease-in;
       @media (--motogp) {
         font-size: 1.4rem;
       }
     }
 
     &:hover {
-      color: rgb(var(--color-white));
+      color: rgb(var(--link-color));
+
       & h3 {
-        color: var(--link-accent-color);
+        color: var(--link-color);
+        background-color: rgb(var(--color-accent));
       }
     }
 
@@ -59,18 +65,19 @@
       }
     }
     & h3 .beta {
-        display: inline-flex;
-        color: rgba(255,255,255,0.4);
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 0.8rem;
-        font-weight: 100;
-        text-transform: uppercase;
-        transform: rotate(-20deg);
-        transition: all 0.4s ease-in-out;
+      display: inline-flex;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      transform-origin: center center;
+      transform: rotate(-20deg);
+      transition: all 0.4s ease-in-out;
     }
     & h3:hover .beta {
-        color: rgba(255,255,255,0.8);
-        transform: rotate(5deg);
+      color: rgba(255, 255, 255, 0.8);
+      transform: rotate(5deg);
     }
   }
   @media (--supersport) {
@@ -87,18 +94,15 @@
     max-width: 33%;
 
     & > a {
-
     }
 
-    @nest &:first-of-type,
-    &:nth-of-type(2){
+    @nest &:first-of-type, &:nth-of-type(2) {
       flex: 0 0 50%;
       max-width: 50%;
       /* flex-wrap: nowrap; */
       margin: 1rem 0;
 
       & > a {
-
       }
     }
   }
@@ -116,20 +120,19 @@
 }
 
 .info {
-  composes: projectItem from "../styles/global.css";
+  composes: projectItem from '../styles/global.css';
 
   @media (--supersport) {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
-  @media(--superbike) {
-      font-size: 1rem;
+  @media (--superbike) {
+    font-size: 1rem;
   }
 
   @nest & svg {
     padding-right: 0.5rem;
     min-width: 4rem;
   }
-
 }
 
 .projectThumb {
@@ -158,13 +161,11 @@
     }
 
     @nest .root > a:hover & {
-        transform: scale(1.03);
+      transform: scale(1.03);
     }
   }
 
-
-  @nest .projectSummary:first-of-type &,
-  .projectSummary:nth-of-type(2) & {
+  @nest .projectSummary:first-of-type &, .projectSummary:nth-of-type(2) & {
     /* padding-bottom: 33.3333%; */
   }
 }
