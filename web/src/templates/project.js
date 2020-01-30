@@ -18,7 +18,6 @@ export const query = graphql`
         title
       }
       relatedProjects {
-        _id
         title
         slug {
           current

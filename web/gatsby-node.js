@@ -76,7 +76,7 @@ async function createProjectPages(graphql, actions, reporter) {
     createPage({
       path,
       component: require.resolve('./src/templates/project.js'),
-      context: { id, slug }
+      context: { id }
     })
 
     createPageDependency({ path, nodeId: id })
