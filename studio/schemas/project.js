@@ -102,7 +102,7 @@ export default {
       of: [{ type: "reference", to: { type: "project" } }]
     }
   ],
-  liveEdit: true,
+  // liveEdit: true,
   preview: {
     select: {
       title: "title",

@@ -20,7 +20,7 @@ export const query = graphql`
       keywords
     }
 
-    projects: allSanityProject(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    projects: allSanityProject(limit: 5, sort: { fields: [startedAt], order: DESC }) {
       edges {
         node {
           id
@@ -135,16 +135,16 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container page='home'>
+      <Container page="home">
         <section>
           <SiteIntro />
         </section>
-        <section id='latest-projects'>
+        <section id="latest-projects">
           {projectNodes && (
             <ProjectPreviewGrid
-              title='Latest projects'
+              title="Latest projects"
               nodes={projectNodes}
-              browseMoreHref='/projects/'
+              browseMoreHref="/projects/"
             />
           )}
         </section>

@@ -12,9 +12,10 @@ export const query = graphql`
       id
       _id
       publishedAt
+      endedAt
       projectURL
       categories {
-        _id
+        id
         title
       }
       relatedProjects {
