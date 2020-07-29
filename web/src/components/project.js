@@ -19,7 +19,7 @@ function Project(props) {
     members,
     projectURL,
     endedAt,
-    relatedProjects
+    relatedProjects,
   } = props
   return (
     <article className={styles.root}>
@@ -66,25 +66,25 @@ function Project(props) {
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>
                 <ul className={styles.asideList}>
-                  {categories.map(category => (
+                  {categories.map((category) => (
                     <li key={category._id}>{category.title}</li>
                   ))}
                 </ul>
               </div>
             )}
 
-            {relatedProjects && relatedProjects.length > 0 && (
+            {/*relatedProjects && relatedProjects.length > 1 && (
               <div className={styles.relatedProjects}>
                 <h3 className={styles.relatedProjectsHeadline}>Related projects</h3>
                 <ul className={styles.asideList}>
-                  {relatedProjects.map(project => (
+                  {relatedProjects.map((project) => (
                     <li key={`related_${project._id}`}>
                       <Link to={`/project/${project.slug.current}`}>{project.title}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
-            )}
+            )*/}
           </aside>
         </div>
       </Container>
