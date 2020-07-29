@@ -25,7 +25,17 @@
     line-height: var(--font-title1-line-height);
   }
 }
+.projectMeta {
+  margin: 1rem 0 0.5rem;
 
+  & p:first-of-type {
+    font-size: unset;
+  }
+}
+.projectLaunch {
+  font-size: 0.8rem;
+  margin: 0;
+}
 .mainImage {
   /* position: relative;
   background: #1e1e1e;
@@ -33,7 +43,7 @@
   overflow: hidden;
   height: 66.66vh;
   max-height: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 
   @nest & img {
     /* position: absolute;
@@ -73,7 +83,6 @@
       font-size: 1.3rem;
     }
   }
-
 }
 
 .metaContent {
@@ -93,11 +102,15 @@
   margin: 1.5rem 0 3rem;
 }
 
-.categories {
+.categories,
+.asideItem {
   border-top: 1px solid rgb(var(--color-white));
   margin: 2rem 0 3rem;
 }
 
+.asideItem {
+  border-top: 0;
+}
 .asideList {
   list-style: none;
   margin: 0.75rem 0;
@@ -129,9 +142,13 @@
   }
 }
 
-.relatedProjectsHeadline {
+.relatedProjectsHeadline,
+.asideHeadline {
   composes: responsiveTitle3 from './typography.module.css';
   margin: 0.5rem 0 0;
+}
+.asideHeadline {
+  margin-top: 0;
 }
 .viewSiteNav {
   font-size: 0.8rem;
@@ -178,7 +195,7 @@
   }
 
   @media (--supersport) {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   @media (--superbike) {

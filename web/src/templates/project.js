@@ -12,9 +12,10 @@ export const query = graphql`
       id
       _id
       publishedAt
+      endedAt
       projectURL
       categories {
-        _id
+        id
         title
       }
       relatedProjects {
@@ -94,9 +95,10 @@ export const query = graphql`
     }
   }
 `
-const ProjectTemplate = props => {
+const ProjectTemplate = (props) => {
   const { data, errors } = props
   const project = data && data.project
+  console.log(project)
   return (
     <Layout>
       {errors && <SEO title="GraphQL Error" />}
